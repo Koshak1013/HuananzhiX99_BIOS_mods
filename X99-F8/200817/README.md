@@ -17,3 +17,5 @@
 *v002:*
 * BCLK 100.00MHz (0.00% SSC)
 * открыт доступ к настройке таймингов (название пункта Memory Timings & Voltage Override) *спасибо Vladimzam*
+
+:exclamation: **После прошивки из под ОС, выключите, а затем снова включите компьютер** :exclamation:
