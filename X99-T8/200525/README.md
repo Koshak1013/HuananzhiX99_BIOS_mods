@@ -1,10 +1,14 @@
 ### Huananzhi X99-T8
 ### BIOS 2020/05/25
-*v001:*
-* BCLK 100.00MHz (0.00% SSC) *спасибо iEngineer*
+*v003:*
+* открыт пункт меню "Program PP0_CURT_CFG_CTRL_MSR"
+* пункт меню "Memory Frequency" больше не будет пропадать
+* открыт пункт меню "CPU C State Control"
+* BCLK 100.00MHz (0.00% SSC)
 
 *v002:*
+* открыт пункт меню "CPU C State Control"
 * BCLK 100.00MHz (0.00% SSC)
-* открыт доступ к настройке C-состояний процессора (название пункта CPU C State Control)
 
-:exclamation: **После прошивки из под ОС, выключите, а затем снова включите компьютер** :exclamation:
+*v001:*
+* BCLK 100.00MHz (0.00% SSC) *спасибо iEngineer*
