@@ -10,7 +10,7 @@
 6. В S3TurboTool нажимаем AMIBCP5
 7. В появившейся утилите AMIBCP открываем биос
 8. Раскрываем список и идём по пути "Common RefCode Configuration > IntelRCSetup > Advanced Power Management Configuration > CPU C State Control"
-9. Справа, в стобце Optimal, двойным кликом меняем значение параметров:
+9. Справа, в столбце Optimal, двойным кликом меняем значение параметров:
     * "Package C State limit" на "C2 state"
     * "CPU C3 report" на "Enable"
     * "CPU C6 report" на "Disable"
