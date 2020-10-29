@@ -11,7 +11,7 @@
     - Удалена опция настройки таймингов ОЗУ (исправлено в v001)
 
 *v004:*
-* устранена ошибка в модуле DevicePathDxe
+* устранена ошибка в модуле DevicePathDxe *спасибо iEngineer*
 * открыт пункт меню "Program PP0_CURT_CFG_CTRL_MSR"
 * открыт доступ к настройке таймингов (название пункта "Memory Timings & Voltage Override")
 * BCLK 100.00MHz (0.00% SSC)
