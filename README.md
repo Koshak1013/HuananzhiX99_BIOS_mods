@@ -30,7 +30,7 @@
 
 При возникновении трудностей, а также если у Вас есть замечания и пожелания, обращайтесь в Telegram-группу https://t.me/chinese_lga2011_3_x99
 
-Также можете посмотреть видео-инструкцию *(спасибо Zerg_fb)*:
+#### Также можете посмотреть видео-инструкцию *(спасибо Zerg_fb)*:
 
 [![](https://i.ytimg.com/an_webp/2hfhdrIrXR4/mqdefault_6s.webp?du=3000&sqp=CJ66hf0F&rs=AOn4CLAJOuGec3cIeCnwFcBaDVoE-s15yw)](https://youtu.be/2hfhdrIrXR4)
 
