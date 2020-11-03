@@ -32,7 +32,7 @@
 
 Также можете посмотреть видео-инструкцию:
 
-[![Xeon E5-2678v3 + Huananzhi X99-TF: путь новичка. Unlock Turbo Boost + Undervolting: новый способ](https://i.ytimg.com/an_webp/2hfhdrIrXR4/mqdefault_6s.webp?du=3000&sqp=CJ66hf0F&rs=AOn4CLAJOuGec3cIeCnwFcBaDVoE-s15yw)](https://youtu.be/2hfhdrIrXR4)
+[(https://i.ytimg.com/an_webp/2hfhdrIrXR4/mqdefault_6s.webp?du=3000&sqp=CJ66hf0F&rs=AOn4CLAJOuGec3cIeCnwFcBaDVoE-s15yw)](https://youtu.be/2hfhdrIrXR4)
 
 #### Часто задаваемые вопросы:
 (Вопрос:) Я привык использовать v3_payne_xx_xx.ffs или V3_MOF_xxxxxx.ffs, вшил по инструкции и получил кирпич. Почему?
