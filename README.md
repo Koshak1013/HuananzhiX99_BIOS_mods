@@ -32,7 +32,7 @@
 
 #### Также можете посмотреть видео-инструкцию *(спасибо Zerg_fb)*:
 
-[![](https://img.youtube.com/vi/2hfhdrIrXR4/maxresdefault.jpg)](https://youtu.be/2hfhdrIrXR4)
+[![](https://img.youtube.com/vi/2hfhdrIrXR4/0.jpg)](https://youtu.be/2hfhdrIrXR4)
 
 #### Часто задаваемые вопросы:
 (Вопрос:) Я привык использовать v3_payne_xx_xx.ffs или V3_MOF_xxxxxx.ffs, вшил по инструкции и получил кирпич. Почему?
