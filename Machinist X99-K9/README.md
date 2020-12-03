@@ -1,4 +1,4 @@
-### Huananzhi X99-T8D
+### Machinist X99-K9
 ### BIOS 2020/06/03
 
 *v001:*
