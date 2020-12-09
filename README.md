@@ -25,6 +25,7 @@
 17. Правый клик по нему, нажимаем "Replace as is...", выбираем собранный ранее драйвер (находится в папке S3TurboHack)
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/screen01.png)
+
 18. Выбираем "File > Save image file...", сохраняем
 #### На этом биос готов к прошивке
 
