@@ -1,5 +1,5 @@
 ### Huananzhi X99-F8D
-### BIOS 2020/06/24
+### BIOS 2020/06/24 (X99MA012)
 
 *v002:*
 * обновлены микрокоды и Realtek Boot Agent GE, добавлен Realtek UNDI Driver, наведён порядок с драйверами SATA RAID

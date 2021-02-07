@@ -1,4 +1,6 @@
 ### Huananzhi X99-8M-F
-### BIOS 2020/10/15
+### BIOS 2020/10/15 (X99MA011)
 
-Coming soon...
+*v001:*
+* открыт доступ к настройке таймингов (название пункта "Memory Timings & Voltage Override")
+* BCLK 100.00MHz (0.00% SSC)
