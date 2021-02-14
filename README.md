@@ -1,6 +1,6 @@
 #### Оглавление
 
-1. [Unlock](#Инструкция-по-разблокировке-максчастоты-на-все-ядра-а-не-на-два-unlock), также доступна [Видео-инструкция](#Видео-инструкция-спасибо-Zerg_fb)
+1. [Unlock](#Инструкция-по-разблокировке-максчастоты-на-все-ядра-а-не-на-два-unlock), также доступна [Видео-инструкция](#Видео-инструкция-спасибо-Zerg_fb), [Unlock (English)](#Instructions-for-unlocking-the-maximum-frequency-for-all-cores-not-two-unlock)
 2. [Undervolting](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting)
 3. [Отключение бипера](#Отключение-бипера)
 4. [Часто задаваемые вопросы](#Часто-задаваемые-вопросы)
@@ -63,6 +63,58 @@ DXE-драйвер:
 #### Видео-инструкция *(спасибо Zerg_fb)*:
 
 [![](https://i.ytimg.com/vi/2hfhdrIrXR4/mqdefault.jpg)](https://youtu.be/2hfhdrIrXR4)
+
+#### Instructions for unlocking the maximum frequency for all cores, not two (unlock)
+
+Make sure you are using the [latest version of S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.5_cat_S3TH_v1.0_DXETH_v1.0_beta.rar) before starting.
+
+*(special thanks to ***ser8989*** for this utility and the new unlock driver)*
+
+1. Launch S3TurboTool and click MMTool5
+2. In the appeared utility "MMTool Aptio", click "Load Image" and select the required BIOS
+3. Go to the "CPU Patch" tab, select the "6F 06F2" microcode, mark "Delete a Patch Data", click Apply and agree
+4. Click "Save Image" and close "MMTool Aptio"
+5. In S3TurboTool, click AMIBCP
+6. In the appeared utility AMIBCP, open the BIOS
+7. Expand the list and follow the path "Common RefCode Configuration > IntelRCSetup > Advanced Power Management Configuration > CPU C State Control" (the path may differ on branded motherboards)
+8. On the right, in the Optimal column, double-click to change the value of the parameters:
+    * "Package C State limit" to "C2 state"
+    * "CPU C3 report" to "Enable"
+    * "CPU C6 report" to "Disable"
+9. Close the AMIBCP window and agree to save the changes made
+10. If the system is dual-processor, then proceed to creating the DXE driver. For uniprocessor systems, you need to check if there is a PchS3Peim module in our BIOS. In S3TurboTool, click UEFITool.
+11. In the UEFITool utility that appears, open the BIOS
+12. We open the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (the lowest one, in which the PEI drivers)>"
+13. We are looking for 271DD6F2 -... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI driver. If this is not the case, then we will build the DXE driver.
+
+PEI driver:
+1. In S3TurboTool, click "Build Driver"
+2. We adjust the required voltage offsets (below there is a method for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Build Driver".
+3. In S3TurboTool, click UEFITool
+4. In the UEFITool utility that appears, open the BIOS
+5. We open the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (the lowest one, in which the PEI drivers)>"
+6. Find 271DD6F2 -... (PchS3Peim module)
+7. Right click on it, click "Replace as is ...", select the previously assembled driver (located in the S3TurboHack folder)
+
+![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen01.png)
+
+8. Choose "File> Save image file ...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
+
+DXE driver:
+1. In S3TurboTool, click "Build Driver"
+2. Press the DXE button in the upper right corner.
+3. We adjust the required voltage offsets (below there is a method for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Build Driver".
+4. In S3TurboTool, click UEFITool
+5. In the UEFITool utility that appears, open the BIOS
+6. Expand the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (penultimate, second from the bottom, in which DXE drivers)>"
+7. Scroll to the bottom and find the last DXE driver in the list
+8. Right click on it, click "Insert after ...", select the previously assembled driver (located in the DXETurboHack folder)
+
+![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen02.png)
+
+9. Choose "File> Save image file ...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
+
+If you have any difficulties, as well as if you have comments and suggestions, please contact the [Telegram group](https://t.me/chinese_lga2011_3_x99)
 
 #### Подбор оптимальных значений смещения напряжений на вашем процессоре (undervolting)
 ---
