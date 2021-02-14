@@ -84,21 +84,21 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 9. Close the AMIBCP window and agree to save the changes made
 10. If the system is dual-processor, then proceed to creating the DXE driver. For uniprocessor systems, you need to check if there is a PchS3Peim module in our BIOS. In S3TurboTool, click UEFITool.
 11. In the UEFITool utility that appears, open the BIOS
-12. We open the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (the lowest one, in which the PEI-drivers)>"
-13. We are looking for 271DD6F2 -... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI-driver. If this is not the case, then we will build the DXE-driver.
+12. We open the list and follow the path "Intel image > BIOS region > 8C8CE578-...(the lowest one, in which the PEI-drivers) >"
+13. We are looking for 271DD6F2-... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI-driver. If this is not the case, then we will build the DXE-driver.
 
 PEI-driver:
 1. In S3TurboTool, click "Собрать драйвер"
 2. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
 3. In S3TurboTool, click UEFITool
 4. In the UEFITool utility that appears, open the BIOS
-5. We open the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (the lowest one, in which the PEI drivers)>"
-6. Find 271DD6F2 -... (PchS3Peim module)
-7. Right click on it, click "Replace as is ...", select the previously assembled driver (located in the S3TurboHack folder)
+5. We open the list and follow the path "Intel image > BIOS region > 8C8CE578-...(the lowest one, in which the PEI drivers) >"
+6. Find 271DD6F2-... (PchS3Peim module)
+7. Right click on it, click "Replace as is...", select the previously assembled driver (located in the S3TurboHack folder)
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen01.png)
 
-8. Choose "File> Save image file ...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
+8. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
 
 DXE-driver:
 1. In S3TurboTool, click "Собрать драйвер"
@@ -106,13 +106,13 @@ DXE-driver:
 3. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
 4. In S3TurboTool, click UEFITool
 5. In the UEFITool utility that appears, open the BIOS
-6. Expand the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (penultimate, second from the bottom, in which DXE-drivers)>"
+6. Expand the list and follow the path "Intel image > BIOS region > 8C8CE578-...(penultimate, second from the bottom, in which DXE-drivers) >"
 7. Scroll to the bottom and find the last DXE-driver in the list
-8. Right click on it, click "Insert after ...", select the previously assembled driver (located in the DXETurboHack folder)
+8. Right click on it, click "Insert after...", select the previously assembled driver (located in the DXETurboHack folder)
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen02.png)
 
-9. Choose "File> Save image file ...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
+9. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
 
 If you have any difficulties, as well as if you have comments and suggestions, please contact the [Telegram group](https://t.me/chinese_lga2011_3_x99)
 
