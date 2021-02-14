@@ -26,17 +26,17 @@
     * "CPU C3 report" на "Enable"
     * "CPU C6 report" на "Disable"
 9. Закрываем окно AMIBCP и соглашаемся на сохранение внесённых изменений
-10. Если система двухпроцессорная, то переходим к созданию DXE-драйвера. Для однопроцессорных систем нужно проверить, есть ли в нашем биосе модуль PchS3Peim. В S3TurboTool нажимаем UEFITool.
+10. Если система двухпроцессорная, то переходим к созданию DXE драйвера. Для однопроцессорных систем нужно проверить, есть ли в нашем биосе модуль PchS3Peim. В S3TurboTool нажимаем UEFITool.
 11. В появившейся утилите UEFITool открываем биос
-12. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(самый нижний, в котором PEI-драйверы) >"
-13. Примерно среди первых 20 значений ищем 271DD6F2-... (модуль PchS3Peim). Если такой есть, значит будем собирать PEI-драйвер. Если такого нет, значит соберём DXE-драйвер.
+12. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(самый нижний, в котором PEI драйверы) >"
+13. Примерно среди первых 20 значений ищем 271DD6F2-... (модуль PchS3Peim). Если такой есть, значит будем собирать PEI драйвер. Если такого нет, значит соберём DXE драйвер.
 
-PEI-драйвер:
+PEI драйвер:
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Настраиваем необходимые смещения напряжения (ниже есть [методика](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении и выводе системы из сна. Нажимаем "Собрать драйвер".
 3. В S3TurboTool нажимаем UEFITool
 4. В появившейся утилите UEFITool открываем биос
-5. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(самый нижний, в котором PEI-драйверы) >"
+5. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(самый нижний, в котором PEI драйверы) >"
 6. Находим 271DD6F2-... (модуль PchS3Peim)
 7. Правый клик по нему, нажимаем "Replace as is...", выбираем собранный ранее драйвер (находится в папке S3TurboHack)
 
@@ -44,21 +44,21 @@ PEI-драйвер:
 
 8. Выбираем "File > Save image file...", сохраняем. Биос готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool.
 
-DXE-драйвер:
+DXE драйвер:
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Нажимаем в верхнем правом углу кнопку DXE.
 3. Настраиваем необходимые смещения напряжения (ниже есть [методика](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении. Нажимаем "Собрать драйвер".
 4. В S3TurboTool нажимаем UEFITool
 5. В появившейся утилите UEFITool открываем биос
-6. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(предпоследний, второй снизу, в котором DXE-драйверы) >"
-7. Прокручиваем в самый низ и находим последний DXE-драйвер в списке
+6. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(предпоследний, второй снизу, в котором DXE драйверы) >"
+7. Прокручиваем в самый низ и находим последний DXE драйвер в списке
 8. Правый клик по нему, нажимаем "Insert after...", выбираем собранный ранее драйвер (находится в папке DXETurboHack)
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen02.png)
 
 9. Выбираем "File > Save image file...", сохраняем. Биос готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool.
 
-При возникновении трудностей, а также если у Вас есть замечания и пожелания, обращайтесь в [Telegram-группу](https://t.me/chinese_lga2011_3_x99)
+При возникновении трудностей, а также если у Вас есть замечания и пожелания, обращайтесь в [Telegram группу](https://t.me/chinese_lga2011_3_x99)
 
 #### Видео-инструкция *(спасибо Zerg_fb)*:
 
@@ -84,10 +84,10 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 9. Close the AMIBCP window and agree to save the changes made
 10. If the system is dual-processor, then proceed to creating the DXE driver. For uniprocessor systems, you need to check if there is a PchS3Peim module in our BIOS. In S3TurboTool, click UEFITool.
 11. In the UEFITool utility that appears, open the BIOS
-12. We open the list and follow the path "Intel image > BIOS region > 8C8CE578-...(the lowest one, in which the PEI-drivers) >"
-13. We are looking for 271DD6F2-... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI-driver. If this is not the case, then we will build the DXE-driver.
+12. We open the list and follow the path "Intel image > BIOS region > 8C8CE578-...(the lowest one, in which the PEI drivers) >"
+13. We are looking for 271DD6F2-... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI driver. If this is not the case, then we will build the DXE driver.
 
-PEI-driver:
+PEI driver:
 1. In S3TurboTool, click "Собрать драйвер"
 2. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
 3. In S3TurboTool, click UEFITool
@@ -100,14 +100,14 @@ PEI-driver:
 
 8. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
 
-DXE-driver:
+DXE driver:
 1. In S3TurboTool, click "Собрать драйвер"
 2. Press the DXE button in the upper right corner.
 3. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on. Click "Собрать драйвер".
 4. In S3TurboTool, click UEFITool
 5. In the UEFITool utility that appears, open the BIOS
-6. Expand the list and follow the path "Intel image > BIOS region > 8C8CE578-...(penultimate, second from the bottom, in which DXE-drivers) >"
-7. Scroll to the bottom and find the last DXE-driver in the list
+6. Expand the list and follow the path "Intel image > BIOS region > 8C8CE578-...(penultimate, second from the bottom, in which DXE drivers) >"
+7. Scroll to the bottom and find the last DXE driver in the list
 8. Right click on it, click "Insert after...", select the previously assembled driver (located in the DXETurboHack folder)
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen02.png)
