@@ -33,7 +33,7 @@
 
 PEI-драйвер:
 1. В S3TurboTool нажимаем "Собрать драйвер"
-2. Настраиваем необходимые смещения напряжения (ниже есть методика нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении и выводе системы из сна. Нажимаем "Собрать драйвер".
+2. Настраиваем необходимые смещения напряжения (ниже есть [методика](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении и выводе системы из сна. Нажимаем "Собрать драйвер".
 3. В S3TurboTool нажимаем UEFITool
 4. В появившейся утилите UEFITool открываем биос
 5. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(самый нижний, в котором PEI-драйверы) >"
@@ -47,7 +47,7 @@ PEI-драйвер:
 DXE-драйвер:
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Нажимаем в верхнем правом углу кнопку DXE.
-3. Настраиваем необходимые смещения напряжения (ниже есть методика нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении и выводе системы из сна. Нажимаем "Собрать драйвер".
+3. Настраиваем необходимые смещения напряжения (ниже есть [методика](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении и выводе системы из сна. Нажимаем "Собрать драйвер".
 4. В S3TurboTool нажимаем UEFITool
 5. В появившейся утилите UEFITool открываем биос
 6. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(предпоследний, второй снизу, в котором DXE-драйверы) >"
@@ -84,12 +84,12 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 9. Close the AMIBCP window and agree to save the changes made
 10. If the system is dual-processor, then proceed to creating the DXE driver. For uniprocessor systems, you need to check if there is a PchS3Peim module in our BIOS. In S3TurboTool, click UEFITool.
 11. In the UEFITool utility that appears, open the BIOS
-12. We open the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (the lowest one, in which the PEI drivers)>"
-13. We are looking for 271DD6F2 -... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI driver. If this is not the case, then we will build the DXE driver.
+12. We open the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (the lowest one, in which the PEI-drivers)>"
+13. We are looking for 271DD6F2 -... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI-driver. If this is not the case, then we will build the DXE-driver.
 
-PEI driver:
-1. In S3TurboTool, click "Build Driver"
-2. We adjust the required voltage offsets (below there is a method for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Build Driver".
+PEI-driver:
+1. In S3TurboTool, click "Собрать драйвер"
+2. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
 3. In S3TurboTool, click UEFITool
 4. In the UEFITool utility that appears, open the BIOS
 5. We open the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (the lowest one, in which the PEI drivers)>"
@@ -100,14 +100,14 @@ PEI driver:
 
 8. Choose "File> Save image file ...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
 
-DXE driver:
-1. In S3TurboTool, click "Build Driver"
+DXE-driver:
+1. In S3TurboTool, click "Собрать драйвер"
 2. Press the DXE button in the upper right corner.
-3. We adjust the required voltage offsets (below there is a method for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Build Driver".
+3. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
 4. In S3TurboTool, click UEFITool
 5. In the UEFITool utility that appears, open the BIOS
-6. Expand the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (penultimate, second from the bottom, in which DXE drivers)>"
-7. Scroll to the bottom and find the last DXE driver in the list
+6. Expand the list and follow the path "Intel image> BIOS region> 8C8CE578 -... (penultimate, second from the bottom, in which DXE-drivers)>"
+7. Scroll to the bottom and find the last DXE-driver in the list
 8. Right click on it, click "Insert after ...", select the previously assembled driver (located in the DXETurboHack folder)
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen02.png)
