@@ -1,6 +1,6 @@
 #### Оглавление
 
-1. [Unlock](#Инструкция-по-разблокировке-максчастоты-на-все-ядра-а-не-на-два-unlock), также доступна [Видео-инструкция](#Видео-инструкция-спасибо-Zerg_fb), [Unlock (English)](#Instructions-for-unlocking-the-maximum-frequency-for-all-cores-not-two-unlock)
+1. [Unlock (Русский)](#Инструкция-по-разблокировке-максчастоты-на-все-ядра-а-не-на-два-unlock), [Unlock (English)](#Instructions-for-unlocking-the-maximum-frequency-for-all-cores-not-two-unlock), также доступна [Видео-инструкция](#Видео-инструкция-спасибо-Zerg_fb)
 2. [Undervolting](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting)
 3. [Отключение бипера](#Отключение-бипера)
 4. [Часто задаваемые вопросы](#Часто-задаваемые-вопросы)
