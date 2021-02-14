@@ -151,7 +151,7 @@ If you have any difficulties, as well as if you have comments and suggestions, p
 
 #### Отключение бипера
 1. Нам нужны определённые модули из биоса, чтобы их получить открываем [S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.5_cat_S3TH_v1.0_DXETH_v1.0_beta.rar), нажимаем UEFITool и в появившейся утилите открываем биос
-2. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(предпоследний, второй снизу, в котором DXE-драйверы) >"
+2. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(предпоследний, второй снизу, в котором DXE драйверы) >"
 3. В самом правом столбце есть названия модулей, ищем Bds(ищите начиная сверху) и StatusCodeDxe(ищите начиная снизу)
 4. Правый клик по "PE32 image section", нажимаем "Extract body...", сохраняем модуль с соответствующим названием, чтобы не запутаться. Также делаем и со вторым модулем.
 
