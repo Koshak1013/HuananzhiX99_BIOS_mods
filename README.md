@@ -47,7 +47,7 @@ PEI-драйвер:
 DXE-драйвер:
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Нажимаем в верхнем правом углу кнопку DXE.
-3. Настраиваем необходимые смещения напряжения (ниже есть [методика](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении и выводе системы из сна. Нажимаем "Собрать драйвер".
+3. Настраиваем необходимые смещения напряжения (ниже есть [методика](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении. Нажимаем "Собрать драйвер".
 4. В S3TurboTool нажимаем UEFITool
 5. В появившейся утилите UEFITool открываем биос
 6. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(предпоследний, второй снизу, в котором DXE-драйверы) >"
@@ -103,7 +103,7 @@ PEI-driver:
 DXE-driver:
 1. In S3TurboTool, click "Собрать драйвер"
 2. Press the DXE button in the upper right corner.
-3. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
+3. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on. Click "Собрать драйвер".
 4. In S3TurboTool, click UEFITool
 5. In the UEFITool utility that appears, open the BIOS
 6. Expand the list and follow the path "Intel image > BIOS region > 8C8CE578-...(penultimate, second from the bottom, in which DXE-drivers) >"
