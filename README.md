@@ -122,7 +122,7 @@ If you have any difficulties, as well as if you have comments and suggestions, p
 
 Подойдут несколько программ для изменения напряжения. Intel XTU, QuickCPU и ThrottleStop. В общем виде инструкция такая: снижаем напряжение процессора, тестируем разными программами в нагрузке, если хорошо, то оставляем на длительное использование. Обычно рабочим снижением будет считаться от 40 до 90, в зависимости от модели процессора и конкретного экземпляра. (для L процессоров может быть рабочим и 120).
 
-Вторым шагом снижаем напряжение на кэше процессора (Cache). Обычно в драйверах выбирается значение 50-60, но на практике оно легко может превышать и 120. Нестабильность проверять программой LinX с AVX-инструкциями и программами, сильно нагружающими память (к примеру TestMem5). Снижение третьего напряжения - System Agent, мало изучено, но стандартное снижение 0 или 50.
+Вторым шагом снижаем напряжение на кэше процессора (Cache). Обычно в драйверах выбирается значение 50-60, но на практике оно легко может превышать и 120. Нестабильность проверять программой LinX с AVX-инструкциями и программами, сильно нагружающими память (к примеру TestMem5). Снижение третьего напряжения - SystemAgent, мало изучено, но стандартное снижение 0 или 50.
 
 После нахождения значений, при которых система стабильно работает как в простое, так и в нагрузке, можно данные значения прошивать в биос материнской платы.
 
@@ -142,7 +142,7 @@ If you have any difficulties, as well as if you have comments and suggestions, p
 1. После запуска ThrottleStop нажимаем FIVR
 2. В блоке "FIVR Control" отмечено "CPU Core", значит меняем смещение на ядрах.
 3. В блоке "CPU Core Voltage" выбираем "Unlock Adjustable Voltage", понижаем "Offset Voltage", например, до -100mV и нажимаем Apply. Если система зависла или мы увидели синий экран, значит такое смещение нам точно не подходит, перезагружаем систему и пробуем -95mV и т.д.
-4. Если всё вроде бы стабильно, значит запускаем программу OCCT, выставляем режим теста "OCCT/большой набор данных/число потоков авто/набор инструкций SSE". Почему SSE, а не AVX? Потому что при AVX-нагрузке процессор переходит в другой режим работы, прибавляет напряжение и снижает частоту. Это не даст результата при тестировании стабильности работы ядер. Перед запуском теста заботимся о должном охлаждении процессора, области VRM и оперативной памяти (она может троттлить без дополнительного охлаждения).
+4. Если всё вроде бы стабильно, значит запускаем [OCCT](https://www.ocbase.com/), выставляем режим теста "CPU/большой набор данных/число потоков авто/набор инструкций SSE". Почему SSE, а не AVX? Потому что при AVX-нагрузке процессор переходит в другой режим работы, прибавляет напряжение и снижает частоту. Это не даст результата при тестировании стабильности работы ядер. Перед запуском теста заботимся о должном охлаждении процессора, области VRM и оперативной памяти (она может троттлить без дополнительного охлаждения).
 5. Запускаем тест. Если система зависла или мы увидели синий экран (обычно ошибка CLOCK_WATCHDOG_TIMEOUT), то уменьшаем наше смещение и продолжаем тестировать до появления стабильности (30 минут теста достаточно). Это и будет нашим значением для ядер.
 
 Далее переходим к тесту кэша (начать можно с -125mV). Тестировать кэш оптимально в LinX (проверено на [v0.6.5](https://github.com/sanekgusev/LinX-old/releases/tag/0.6.5)), выставляем настройку 8192МБ памяти, нажимаем Start. При нестабильности возможен синий экран (обычно ошибка WHEA_UNCORRECTABLE_ERROR). Достаточно 5 минут теста.
@@ -155,7 +155,7 @@ As you know, China boards do not allow to adequately, in the usual form, change 
 
 Several programs are suitable for changing the voltage. Intel XTU, QuickCPU and ThrottleStop. In general, the instruction is as follows: we lower the processor voltage, test it with different programs in the load, if it is good, then we leave it for long-term use. Typically, a working degradation will be considered from 40 to 90, depending on the processor model and specific instance. (for L processors, 120 can be working).
 
-The second step is to lower the voltage on the processor cache (Cache). Usually the driver chooses a value of 50-60, but in practice it can easily exceed 120. Check the instability with the LinX program with AVX-instructions and programs that heavily load memory (for example TestMem5). Reduction of the third voltage - System Agent, little studied, but the standard decrease is 0 or 50.
+The second step is to lower the voltage on the processor cache. Usually the driver chooses a value of 50-60, but in practice it can easily exceed 120. Check the instability with the LinX program with AVX-instructions and programs that heavily load memory (for example TestMem5). Reduction of the third voltage - SystemAgent, little studied, but the standard decrease is 0 or 50.
 
 After finding the values ​​at which the system works stably both in idle and in load, these values ​​can be flashed into the BIOS of the motherboard.
 
@@ -175,7 +175,7 @@ Before proceeding, save important data on your system, be prepared for possible 
 1. After launching ThrottleStop, press FIVR
 2. In the "FIVR Control" block, "CPU Core" is marked, which means we change the offset on the cores.
 3. In the "CPU Core Voltage" block, select "Unlock Adjustable Voltage", lower the "Offset Voltage", for example, to -100mV and click Apply. If the system freezes or we see a blue screen, then such an offset is definitely not suitable for us, we reboot the system and try -95mV, etc.
-4. If everything seems to be stable, then we launch the OCCT program, set the test mode "OCCT / large data set / number of auto threads / SSE instruction set". Why SSE and not AVX? Because under AVX load, the processor switches to another operating mode, adds voltage and decreases frequency. This will not work when testing the stability of the cores. Before running the test, we take care of proper cooling of the processor, VRM area and RAM (it can throttle without additional cooling).
+4. If everything seems to be stable, then we launch the [OCCT](https://www.ocbase.com/), set the test mode "CPU/large data set/auto thread count/SSE instruction set". Why SSE and not AVX? Because under AVX load, the processor switches to another operating mode, adds voltage and decreases frequency. This will not work when testing the stability of the cores. Before running the test, we take care of proper cooling of the processor, VRM area and RAM (it can throttle without additional cooling).
 5. We run the test. If the system freezes or we see a blue screen (usually the CLOCK_WATCHDOG_TIMEOUT error), then we reduce our offset and continue testing until stability appears (30 minutes of testing is enough). This will be our core value.
 
 Next, we move on to the cache test (you can start with -125mV). Optimally test the cache in LinX (tested on [v0.6.5](https://github.com/sanekgusev/LinX-old/releases/tag/0.6.5)), set the 8192MB memory setting, press Start. In case of instability, a blue screen is possible (usually a WHEA_UNCORRECTABLE_ERROR error). 5 minutes of the test is enough.
