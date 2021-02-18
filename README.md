@@ -1,7 +1,7 @@
 #### Оглавление
 
 1. [Unlock (Русский)](#Инструкция-по-разблокировке-максчастоты-на-все-ядра-а-не-на-два-unlock), [Unlock (English)](#Instructions-for-unlocking-the-maximum-frequency-for-all-cores-not-two-unlock), также доступна [Видео-инструкция](#Видео-инструкция-спасибо-Zerg_fb)
-2. [Undervolting](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting)
+2. [Undervolting (Русский)](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting), [Undervolting (English)](#Finding-the-optimal-voltage-offset-values-for-your-processor-undervolting)
 3. [Отключение бипера](#Отключение-бипера)
 4. [Часто задаваемые вопросы](#Часто-задаваемые-вопросы)
 5. [О пост-кодах](#О-пост-кодах)
@@ -148,6 +148,39 @@ If you have any difficulties, as well as if you have comments and suggestions, p
 Далее переходим к тесту кэша (начать можно с -125mV). Тестировать кэш оптимально в LinX (проверено на [v0.6.5](https://github.com/sanekgusev/LinX-old/releases/tag/0.6.5)), выставляем настройку 8192МБ памяти, нажимаем Start. При нестабильности возможен синий экран (обычно ошибка WHEA_UNCORRECTABLE_ERROR). Достаточно 5 минут теста.
 
 Т.к. для проверки кэша нужны плотные потоки данных, то в дальнейшем рекомендуется ещё раз провести тест, но уже с анлоком вкупе с багом SVID/FIVR (уделите особое внимание температуре во время теста)
+
+#### Finding the optimal voltage offset values ​​for your processor (undervolting)
+---
+As you know, China boards do not allow to adequately, in the usual form, change the processor voltage for 26xx v3 (46xx v3) systems. When using a turbo-boost unlock, a voltage reduction is used to make the processor work longer or at a higher frequency. But voltage reduction by offset occurs simultaneously in all modes (there are more than three of them). And the most problematic part is stress in idle time. Thus, when selecting an unlock driver with numbers, for example "V3_MOF_705050.fss", the processor voltage decreases by 0.07V in all operating modes, the processor cache decreases by 0.05V in all operating modes. Experience has shown that instability, in the overwhelming majority of cases, manifests itself in a system idle state (inactivity). Thus, it is possible, without using an unlock, in the normal mode, to reduce the processor frequency by offset and conduct testing without fear of BIOS firmware and similar related problems. And in the future, when the processor idle operating voltages are known, reduce them once and for all by the BIOS using the program (S3TurboTool Sergey Bakaev ser8989). The change will occur with the help of software, and when the system hangs or reboots, everything will return to its original state.
+
+Several programs are suitable for changing the voltage. Intel XTU, QuickCPU and ThrottleStop. In general, the instruction is as follows: we lower the processor voltage, test it with different programs in the load, if it is good, then we leave it for long-term use. Typically, a working degradation will be considered from 40 to 90, depending on the processor model and specific instance. (for L processors, 120 can be working).
+
+The second step is to lower the voltage on the processor cache (Cache). Usually the driver chooses a value of 50-60, but in practice it can easily exceed 120. Check the instability with the LinX program with AVX-instructions and programs that heavily load memory (for example TestMem5). Reduction of the third voltage - System Agent, little studied, but the standard decrease is 0 or 50.
+
+After finding the values ​​at which the system works stably both in idle and in load, these values ​​can be flashed into the BIOS of the motherboard.
+
+*(by ***Vasily Pupkin***)*
+
+---
+
+Each processor model has a TDP value, this is its maximum power in watts. In some tasks, this limit is reached, and the processor begins to reduce the frequency on the cores in steps of 100MHz in order not to go beyond this limit. Power is voltage times current. Lowering the voltage improves the processor's energy efficiency, i.e. at the same load, energy consumption and, as a consequence, heat generation are reduced. Accordingly, with the same boundary load, the processor will be able to hold the frequency more confidently.
+
+Let's touch on two blocks in our processors - Core (cores) and Cache (cache) (there is also a SystemAgent block, but lowering the voltage on it does not reduce processor consumption, so it is better not to change it).
+
+The voltage is lowered by offsetting it by a certain amount. Those. in all operating modes of the processor, the voltage will be less by the value set by us. It is safe to search for bias values ​​on cores on a system without unlock. You can do this on a system with an active unlock, in which case when the offset is changed, the unlock will disappear. This will not affect the search for a value in any way. in nuclei, the voltage changes depending on its frequency.
+
+To change the offset, we use the Intel XTU, QuickCPU or ThrottleStop program. Further it will be considered on the example of the latter.
+
+Before proceeding, save important data on your system, be prepared for possible freezes or blue screens.
+1. After launching ThrottleStop, press FIVR
+2. In the "FIVR Control" block, "CPU Core" is marked, which means we change the offset on the cores.
+3. In the "CPU Core Voltage" block, select "Unlock Adjustable Voltage", lower the "Offset Voltage", for example, to -100mV and click Apply. If the system freezes or we see a blue screen, then such an offset is definitely not suitable for us, we reboot the system and try -95mV, etc.
+4. If everything seems to be stable, then we launch the OCCT program, set the test mode "OCCT / large data set / number of auto threads / SSE instruction set". Why SSE and not AVX? Because under AVX load, the processor switches to another operating mode, adds voltage and decreases frequency. This will not work when testing the stability of the cores. Before running the test, we take care of proper cooling of the processor, VRM area and RAM (it can throttle without additional cooling).
+5. We run the test. If the system freezes or we see a blue screen (usually the CLOCK_WATCHDOG_TIMEOUT error), then we reduce our offset and continue testing until stability appears (30 minutes of testing is enough). This will be our core value.
+
+Next, we move on to the cache test (you can start with -125mV). Optimally test the cache in LinX (tested on [v0.6.5](https://github.com/sanekgusev/LinX-old/releases/tag/0.6.5)), set the 8192MB memory setting, press Start. In case of instability, a blue screen is possible (usually a WHEA_UNCORRECTABLE_ERROR error). 5 minutes of the test is enough.
+
+Because to check the cache, dense data streams are needed, then it is recommended to run the test again in the future, but this time with unlock, coupled with the SVID/FIVR bug (pay special attention to the temperature during the test)
 
 #### Отключение бипера
 1. Нам нужны определённые модули из биоса, чтобы их получить открываем [S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.5_cat_S3TH_v1.0_DXETH_v1.0_beta.rar), нажимаем UEFITool и в появившейся утилите открываем биос
