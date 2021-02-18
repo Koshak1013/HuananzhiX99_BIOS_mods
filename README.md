@@ -167,7 +167,7 @@ Each processor model has a TDP value, this is its maximum power in watts. In som
 
 Let's touch on two blocks in our processors - Core and Cache (there is also a SystemAgent block, but lowering the voltage on it does not reduce processor consumption, so it is better not to change it).
 
-The voltage is lowered by offsetting it by a certain amount. Those. in all operating modes of the processor, the voltage will be less by the value set by us. It is safe to search for bias values ​​on cores on a system without unlock. You can do this on a system with an active unlock, in which case when the offset is changed, the unlock will disappear. This will not affect the search for a value in any way. in nuclei, the voltage changes depending on its frequency.
+The voltage is lowered by offsetting it by a certain amount. That is, in all operating modes of the processor, the voltage will be less by the value set by us. It is safe to search for bias values ​​on cores on a system without unlock. You can do this on a system with an active unlock, in which case when the offset is changed, the unlock will disappear. This will not affect the search for a value in any way. in nuclei, the voltage changes depending on its frequency.
 
 To change the offset, we use the Intel XTU, QuickCPU or ThrottleStop program. Further it will be considered on the example of the latter.
 
