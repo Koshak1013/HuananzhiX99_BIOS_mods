@@ -165,7 +165,7 @@ After finding the values ​​at which the system works stably both in idle and
 
 Each processor model has a TDP value, this is its maximum power in watts. In some tasks, this limit is reached, and the processor begins to reduce the frequency on the cores in steps of 100MHz in order not to go beyond this limit. Power is voltage times current. Lowering the voltage improves the processor's energy efficiency, i.e. at the same load, energy consumption and, as a consequence, heat generation are reduced. Accordingly, with the same boundary load, the processor will be able to hold the frequency more confidently.
 
-Let's touch on two blocks in our processors - Core (cores) and Cache (cache) (there is also a SystemAgent block, but lowering the voltage on it does not reduce processor consumption, so it is better not to change it).
+Let's touch on two blocks in our processors - Core and Cache (there is also a SystemAgent block, but lowering the voltage on it does not reduce processor consumption, so it is better not to change it).
 
 The voltage is lowered by offsetting it by a certain amount. Those. in all operating modes of the processor, the voltage will be less by the value set by us. It is safe to search for bias values ​​on cores on a system without unlock. You can do this on a system with an active unlock, in which case when the offset is changed, the unlock will disappear. This will not affect the search for a value in any way. in nuclei, the voltage changes depending on its frequency.
 
