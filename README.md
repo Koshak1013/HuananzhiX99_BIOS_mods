@@ -140,7 +140,7 @@ If you have any difficulties, as well as if you have comments and suggestions, p
 
 Перед дальнейшими действиями, сохраните важные данные в вашей системе, будьте готовы к возможным зависаниям или синему экрану.
 1. После запуска [ThrottleStop](https://www.techpowerup.com/download/techpowerup-throttlestop/) нажимаем FIVR
-2. В блоке "FIVR Control" отмечено "CPU Core", значит меняем смещение на ядрах.
+2. В блоке "FIVR Control" отмечено "CPU Core", значит меняем смещение на ядрах
 3. В блоке "CPU Core Voltage" выбираем "Unlock Adjustable Voltage", понижаем "Offset Voltage", например, до -100mV и нажимаем Apply. Если система зависла или мы увидели синий экран, значит такое смещение нам точно не подходит, перезагружаем систему и пробуем -95mV и т.д.
 4. Если всё вроде бы стабильно, значит запускаем [OCCT](https://www.ocbase.com/), выставляем режим теста "CPU/большой набор данных/число потоков авто/набор инструкций SSE". Почему SSE, а не AVX? Потому что при AVX-нагрузке процессор переходит в другой режим работы, прибавляет напряжение и снижает частоту. Это не даст результата при тестировании стабильности работы ядер. Перед запуском теста заботимся о должном охлаждении процессора, области VRM и оперативной памяти (она может троттлить без дополнительного охлаждения).
 5. Запускаем тест. Если система зависла или мы увидели синий экран (обычно ошибка CLOCK_WATCHDOG_TIMEOUT), то уменьшаем наше смещение и продолжаем тестировать до появления стабильности (30 минут теста достаточно). Это и будет нашим значением для ядер.
@@ -173,7 +173,7 @@ To change the offset, we use the Intel XTU, QuickCPU or ThrottleStop program. Fu
 
 Before proceeding, save important data on your system, be prepared for possible freezes or blue screens.
 1. After launching [ThrottleStop](https://www.techpowerup.com/download/techpowerup-throttlestop/), press FIVR
-2. In the "FIVR Control" block, "CPU Core" is marked, which means we change the offset on the cores.
+2. In the "FIVR Control" block, "CPU Core" is marked, which means we change the offset on the cores
 3. In the "CPU Core Voltage" block, select "Unlock Adjustable Voltage", lower the "Offset Voltage", for example, to -100mV and click Apply. If the system freezes or we see a blue screen, then such an offset is definitely not suitable for us, we reboot the system and try -95mV, etc.
 4. If everything seems to be stable, then we launch the [OCCT](https://www.ocbase.com/), set the test mode "CPU/large data set/auto thread count/SSE instruction set". Why SSE and not AVX? Because under AVX load, the processor switches to another operating mode, adds voltage and decreases frequency. This will not work when testing the stability of the cores. Before running the test, we take care of proper cooling of the processor, VRM area and RAM (it can throttle without additional cooling).
 5. We run the test. If the system freezes or we see a blue screen (usually the CLOCK_WATCHDOG_TIMEOUT error), then we reduce our offset and continue testing until stability appears (30 minutes of testing is enough). This will be our core value.
