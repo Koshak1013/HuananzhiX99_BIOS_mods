@@ -46,7 +46,7 @@ PEI драйвер:
 
 DXE драйвер:
 1. В S3TurboTool нажимаем "Собрать драйвер"
-2. Нажимаем в верхнем правом углу кнопку DXE.
+2. Нажимаем в верхнем правом углу кнопку DXE
 3. Настраиваем необходимые смещения напряжения (ниже есть [методика](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении. Нажимаем "Собрать драйвер".
 4. В S3TurboTool нажимаем UEFITool
 5. В появившейся утилите UEFITool открываем биос
@@ -102,7 +102,7 @@ PEI driver:
 
 DXE driver:
 1. In S3TurboTool, click "Собрать драйвер"
-2. Press the DXE button in the upper right corner.
+2. Press the DXE button in the upper right corner
 3. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on. Click "Собрать драйвер".
 4. In S3TurboTool, click UEFITool
 5. In the UEFITool utility that appears, open the BIOS
