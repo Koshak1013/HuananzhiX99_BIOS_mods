@@ -10,7 +10,7 @@
 
 #### Инструкция по разблокировке макс.частоты на все ядра, а не на два (unlock)
 
-Перед началом убедитесь, что используете [актуальную версию S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.5_cat_S3TH_v1.0_DXETH_v1.0_beta.rar)
+Перед началом убедитесь, что используете [актуальную версию S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar)
 
 *(за данную утилиту и новый драйвер анлока особая благодарность ***ser8989***)*
 
@@ -74,7 +74,7 @@ RAW драйвер (поддерживает режим сна, поддержи
 
 #### Instructions for unlocking the maximum frequency for all cores, not two (unlock)
 
-Make sure you are using the [latest version of S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.5_cat_S3TH_v1.0_DXETH_v1.0_beta.rar) before starting.
+Make sure you are using the [latest version of S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar) before starting.
 
 *(special thanks to ***ser8989*** for this utility and the new unlock driver)*
 
@@ -191,7 +191,7 @@ Next, we move on to the cache test (you can start with -125mV). Optimally test t
 Because to check the cache, dense data streams are needed, then it is recommended to run the test again in the future, but this time with unlock, coupled with the SVID/FIVR bug (pay special attention to the temperature during the test)
 
 #### Отключение бипера
-1. Нам нужны определённые модули из биоса, чтобы их получить открываем [S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.5_cat_S3TH_v1.0_DXETH_v1.0_beta.rar), нажимаем UEFITool и в появившейся утилите открываем биос
+1. Нам нужны определённые модули из биоса, чтобы их получить открываем [S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar), нажимаем UEFITool и в появившейся утилите открываем биос
 2. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(предпоследний, второй снизу, в котором DXE драйверы) >"
 3. В самом правом столбце есть названия модулей, ищем Bds(ищите начиная сверху) и StatusCodeDxe(ищите начиная снизу)
 4. Правый клик по "PE32 image section", нажимаем "Extract body...", сохраняем модуль с соответствующим названием, чтобы не запутаться. Также делаем и со вторым модулем.
