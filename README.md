@@ -44,7 +44,7 @@
 
 8. Выбираем "File > Save image file...", сохраняем. Биос готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool.
 
-*ВНИМАНИЕ!* На некоторых брендовых материнских платах есть вероятность неработоспособности биоса с данным драйвером, в таком случае рекомендуется собрать RAW драйвер.
+*ВНИМАНИЕ! На некоторых брендовых материнских платах есть вероятность неработоспособности биоса с данным драйвером, в таком случае рекомендуется собрать RAW драйвер.*
 
 ***DXE драйвер*** (не поддерживает режим сна, поддерживает одно- и двухпроцессорные системы):
 1. В S3TurboTool нажимаем "Собрать драйвер"
@@ -66,7 +66,7 @@
 3. Настраиваем необходимые смещения напряжения. Нажимаем "Собрать и установить драйвер".
 4. Биос сохранился в ту же папку и готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool.
 
-*ВНИМАНИЕ!* После установки RAW драйвера не редактируйте этот биос любыми программами, в противном случае биос станет неработоспособным.
+*ВНИМАНИЕ! После установки RAW драйвера не редактируйте этот биос любыми программами, в противном случае биос станет неработоспособным.*
 
 При возникновении трудностей, а также если у Вас есть замечания и пожелания, обращайтесь в [Telegram группу](https://t.me/chinese_lga2011_3_x99)
 
@@ -97,7 +97,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 12. We open the list and follow the path "Intel image > BIOS region > 8C8CE578-...(the lowest one, in which the PEI drivers) >"
 13. We are looking for 271DD6F2-... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI driver. If this is not the case, then we will build the DXE driver.
 
-***PEI driver***:
+***PEI driver*** (supports sleep mode, only supports uniprocessor systems):
 1. In S3TurboTool, click "Собрать драйвер"
 2. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
 3. In S3TurboTool, click UEFITool
@@ -110,7 +110,9 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 
 8. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
 
-***DXE driver***:
+*ATTENTION! On some branded motherboards there is a possibility that the BIOS will not work with this driver, in which case it is recommended to build a RAW driver.*
+
+***DXE driver*** (does not support sleep mode, supports single and dual processor systems):
 1. In S3TurboTool, click "Собрать драйвер"
 2. Press the DXE button in the upper right corner
 3. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on. Click "Собрать драйвер".
@@ -123,6 +125,14 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen02.png)
 
 9. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
+
+***RAW driver*** (supports sleep mode, only supports uniprocessor systems):
+1. In S3TurboTool, click "Build Driver"
+2. Press the RAW button in the upper right corner and select the required BIOS
+3. Adjust the required voltage offsets. Click "Собрать и установить драйвер".
+4. The BIOS is saved in the same folder and is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
+
+*ATTENTION! After installing the RAW driver, do not edit this BIOS with any programs, otherwise the BIOS will become inoperable.*
 
 If you have any difficulties, as well as if you have comments and suggestions, please contact the [Telegram group](https://t.me/chinese_lga2011_3_x99)
 
