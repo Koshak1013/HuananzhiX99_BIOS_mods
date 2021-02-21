@@ -32,6 +32,8 @@
 13. Примерно среди первых 20 значений ищем 271DD6F2-... (модуль PchS3Peim). Если такой есть, значит будем собирать PEI драйвер. Если такого нет, значит соберём DXE драйвер.
 
 ***PEI драйвер*** (поддерживает режим сна, поддерживает только однопроцессорные системы):
+
+*ВНИМАНИЕ! На некоторых брендовых материнских платах есть вероятность неработоспособности биоса с данным драйвером, в таком случае рекомендуется собрать RAW драйвер.*
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Настраиваем необходимые смещения напряжения (ниже есть [методика](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении и выводе системы из сна. Нажимаем "Собрать драйвер".
 3. В S3TurboTool нажимаем UEFITool
@@ -43,8 +45,6 @@
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen01.png)
 
 8. Выбираем "File > Save image file...", сохраняем. Биос готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool.
-
-*ВНИМАНИЕ! На некоторых брендовых материнских платах есть вероятность неработоспособности биоса с данным драйвером, в таком случае рекомендуется собрать RAW драйвер.*
 
 ***DXE драйвер*** (не поддерживает режим сна, поддерживает одно- и двухпроцессорные системы):
 1. В S3TurboTool нажимаем "Собрать драйвер"
@@ -61,12 +61,12 @@
 9. Выбираем "File > Save image file...", сохраняем. Биос готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool.
 
 ***RAW драйвер*** (поддерживает режим сна, поддерживает только однопроцессорные системы):
+
+*ВНИМАНИЕ! После установки RAW драйвера не редактируйте этот биос любыми программами, в противном случае биос станет неработоспособным.*
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Нажимаем в верхнем правом углу кнопку RAW и выбираем необходимый биос
 3. Настраиваем необходимые смещения напряжения. Нажимаем "Собрать и установить драйвер".
 4. Биос сохранился в ту же папку и готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool.
-
-*ВНИМАНИЕ! После установки RAW драйвера не редактируйте этот биос любыми программами, в противном случае биос станет неработоспособным.*
 
 При возникновении трудностей, а также если у Вас есть замечания и пожелания, обращайтесь в [Telegram группу](https://t.me/chinese_lga2011_3_x99)
 
@@ -98,6 +98,8 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 13. We are looking for 271DD6F2-... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI driver. If this is not the case, then we will build the DXE driver.
 
 ***PEI driver*** (supports sleep mode, only supports uniprocessor systems):
+
+*ATTENTION! On some branded motherboards there is a possibility that the BIOS will not work with this driver, in which case it is recommended to build a RAW driver.*
 1. In S3TurboTool, click "Собрать драйвер"
 2. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
 3. In S3TurboTool, click UEFITool
@@ -109,8 +111,6 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen01.png)
 
 8. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
-
-*ATTENTION! On some branded motherboards there is a possibility that the BIOS will not work with this driver, in which case it is recommended to build a RAW driver.*
 
 ***DXE driver*** (does not support sleep mode, supports single and dual processor systems):
 1. In S3TurboTool, click "Собрать драйвер"
@@ -127,12 +127,12 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 9. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
 
 ***RAW driver*** (supports sleep mode, only supports uniprocessor systems):
+
+*ATTENTION! After installing the RAW driver, do not edit this BIOS with any programs, otherwise the BIOS will become inoperable.*
 1. In S3TurboTool, click "Build Driver"
 2. Press the RAW button in the upper right corner and select the required BIOS
 3. Adjust the required voltage offsets. Click "Собрать и установить драйвер".
 4. The BIOS is saved in the same folder and is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
-
-*ATTENTION! After installing the RAW driver, do not edit this BIOS with any programs, otherwise the BIOS will become inoperable.*
 
 If you have any difficulties, as well as if you have comments and suggestions, please contact the [Telegram group](https://t.me/chinese_lga2011_3_x99)
 
@@ -216,7 +216,7 @@ Because to check the cache, dense data streams are needed, then it is recommende
 8. Теперь снова открываем UEFITool (повторяем шаги 1-3 инструкции), делаем правый клик по "PE32 image section", нажимаем "Replace body...", и выбираем соответствующий модуль. Также делаем и со вторым модулем.
 9. Выбираем "File > Save image file...", сохраняем. Биос готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool.
 
-Если бипер по-прежнему издаёт звуки, то попробуйте также обработать модуль StatusCodePei (в разделе с PEI модулями). Если и это не поможет, то пожалуйста сообщите об этом в [Telegram группу](https://t.me/chinese_lga2011_3_x99).
+*Если бипер по-прежнему издаёт звуки, то попробуйте также обработать модуль StatusCodePei (в разделе с PEI модулями). Если и это не поможет, то пожалуйста сообщите об этом в [Telegram группу](https://t.me/chinese_lga2011_3_x99).*
 
 #### Часто задаваемые вопросы
 ---
