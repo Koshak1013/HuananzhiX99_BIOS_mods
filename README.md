@@ -35,7 +35,7 @@
 
 *ВНИМАНИЕ! На некоторых брендовых материнских платах есть вероятность неработоспособности биоса с данным драйвером, в таком случае рекомендуется собрать RAW драйвер.*
 1. В S3TurboTool нажимаем "Собрать драйвер"
-2. Настраиваем необходимые смещения напряжения (ниже есть [методика](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении и выводе системы из сна. Нажимаем "Собрать драйвер".
+2. Настраиваем необходимые смещения напряжения ([методика нахождения примерных значений](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting)). Также выбираем, нужен ли дополнительный сигнал при включении и выводе системы из сна. Нажимаем "Собрать драйвер".
 3. В S3TurboTool нажимаем UEFITool
 4. В появившейся утилите UEFITool открываем биос
 5. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(самый нижний, в котором PEI драйверы) >"
@@ -49,7 +49,7 @@
 ***DXE драйвер*** (не поддерживает режим сна, поддерживает одно- и двухпроцессорные системы):
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Нажимаем в верхнем правом углу кнопку DXE
-3. Настраиваем необходимые смещения напряжения (ниже есть [методика](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) нахождения примерных значений). Также выбираем, нужен ли дополнительный сигнал при включении. Нажимаем "Собрать драйвер".
+3. Настраиваем необходимые смещения напряжения ([методика нахождения примерных значений](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting)). Также выбираем, нужен ли дополнительный сигнал при включении. Нажимаем "Собрать драйвер".
 4. В S3TurboTool нажимаем UEFITool
 5. В появившейся утилите UEFITool открываем биос
 6. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(предпоследний, второй снизу, в котором DXE драйверы) >"
@@ -101,7 +101,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 
 *ATTENTION! On some branded motherboards there is a possibility that the BIOS will not work with this driver, in which case it is recommended to build a RAW driver.*
 1. In S3TurboTool, click "Собрать драйвер"
-2. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
+2. We adjust the required voltage offsets ([method for finding approximate values](#Finding-the-optimal-voltage-offset-values-for-your-processor-undervolting)). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
 3. In S3TurboTool, click UEFITool
 4. In the UEFITool utility that appears, open the BIOS
 5. We open the list and follow the path "Intel image > BIOS region > 8C8CE578-...(the lowest one, in which the PEI drivers) >"
@@ -115,7 +115,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 ***DXE driver*** (does not support sleep mode, supports single and dual processor systems):
 1. In S3TurboTool, click "Собрать драйвер"
 2. Press the DXE button in the upper right corner
-3. We adjust the required voltage offsets (below there is a [method](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting) for finding approximate values). We also choose whether an additional signal is needed when turning on. Click "Собрать драйвер".
+3. We adjust the required voltage offsets ([method for finding approximate values](#Finding-the-optimal-voltage-offset-values-for-your-processor-undervolting)). We also choose whether an additional signal is needed when turning on. Click "Собрать драйвер".
 4. In S3TurboTool, click UEFITool
 5. In the UEFITool utility that appears, open the BIOS
 6. Expand the list and follow the path "Intel image > BIOS region > 8C8CE578-...(penultimate, second from the bottom, in which DXE drivers) >"
