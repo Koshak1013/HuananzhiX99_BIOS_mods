@@ -68,6 +68,8 @@
 3. Настраиваем необходимые смещения напряжения. Нажимаем "Собрать и установить драйвер".
 4. Биос сохранился в ту же папку и готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool.
 
+Если имеются какие-то проблемы после прошивки, то джампером сбрасываем настройки CMOS
+
 При возникновении трудностей, а также если у Вас есть замечания и пожелания, обращайтесь в [Telegram группу](https://t.me/chinese_lga2011_3_x99)
 
 #### Видео-инструкция *(спасибо Zerg_fb)*:
@@ -133,6 +135,8 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 2. Press the RAW button in the upper right corner and select the required BIOS
 3. Adjust the required voltage offsets. Click "Собрать и установить драйвер".
 4. The BIOS is saved in the same folder and is ready for flashing. You can also flash it with the corresponding button in S3TurboTool.
+
+If problems arise after the firmware, use the jumper to reset the CMOS settings
 
 If you have any difficulties, as well as if you have comments and suggestions, please contact the [Telegram group](https://t.me/chinese_lga2011_3_x99)
 
