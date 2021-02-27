@@ -1,0 +1,2 @@
+### Huananzhi X99-F8D
+### BIOS 2020/11/06 (X99MA012)
