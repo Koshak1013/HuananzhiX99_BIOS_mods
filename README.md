@@ -238,7 +238,7 @@ Because to check the cache, dense data streams are needed, then it is recommende
 
 ***Ответ:*** Все прорывные исследования и реализацию новых возможностей производит ser8989 - 5366-7два80-9045-9598 (МТС Банк)
 
-На видеокарту для Кошака ^-^ - Qiwi +7-902-два13-33-10 или 4276-6900-10два6-7273 (Сбербанк)
+Кошак ^-^ - Qiwi +7-902-два13-33-10 или 4276-6900-10два6-7273 (Сбербанк)
 
 На протирку для KOT JIETA - 5469-1600-два146-9254 (Сбербанк)
 
@@ -261,7 +261,9 @@ Because to check the cache, dense data streams are needed, then it is recommende
 * CD - установлен V4 ES (они несовместимы)
 * B7 - пробовать один модуль памяти
 
-Информация будет дополняться
+![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen06.png)
+![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen07.png)
+![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen08.png)
 
 #### Если вы наблюдаете частоту системной шины меньшую, чем 99,75МГц
 Например, 98МГц. В таком случае вы не получите 100МГц, даже если прошьёте соответствующий биос. Насколько известно на данное время, частоту занижает активный Hyper-V в ОС.
