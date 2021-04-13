@@ -5,8 +5,8 @@
     + Присутствует опция настройки таймингов ОЗУ
 
 *v007:*
-* + обновлён микрокод для V4 до версии 3C
-* + открыты пункты меню "SOCKET RAPL Config", "Per-Socket Configuration" и "PCI Subsystem Settings" *спасибо Pavlon и MacArrow*
+*+ микрокод для V4 и Realtek UNDI Driver обновлены до актуальных версий
+*+ открыты пункты меню "SOCKET RAPL Config", "Per-Socket Configuration" и "PCI Subsystem Settings" *спасибо Pavlon и MacArrow*
 * добавлено +3.3V в HardwareMonitor
 * основа биоса GHX99015
 * включена поддержка ASPM
