@@ -4,6 +4,8 @@
     + Для серверной памяти активна ECC
     + Присутствует опция настройки таймингов ОЗУ
 
+[Для удаления сигналов бипера](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods#%D0%9E%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B1%D0%B8%D0%BF%D0%B5%D1%80%D0%B0), достаточно отключить код только в модуле Bds
+
 *v007:*
 * + микрокод для V4 и Realtek UNDI Driver обновлены до актуальных версий
 * + открыты пункты меню "SOCKET RAPL Config", "Per-Socket Configuration" и "PCI Subsystem Settings" *спасибо Pavlon и MacArrow*
