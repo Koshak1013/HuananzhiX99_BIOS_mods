@@ -2,11 +2,12 @@
 
 1. [Unlock (Русский)](#Инструкция-по-разблокировке-максчастоты-на-все-ядра-а-не-на-два-unlock), [Unlock (English)](#Instructions-for-unlocking-the-maximum-frequency-for-all-cores-not-two-unlock), также доступна [Видео-инструкция](#Видео-инструкция-спасибо-Zerg_fb)
 2. [Undervolting (Русский)](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting), [Undervolting (English)](#Finding-the-optimal-voltage-offset-values-for-your-processor-undervolting)
-3. [Отключение бипера](#Отключение-бипера)
-4. [Часто задаваемые вопросы](#Часто-задаваемые-вопросы)
-5. [О пост-кодах](#О-пост-кодах)
-6. [Если вы наблюдаете частоту системной шины меньшую, чем 99,75МГц](#Если-вы-наблюдаете-частоту-системной-шины-меньшую-чем-9975МГц)
-7. [Настройка управления оборотами вентиляторов для Huananzhi X99-8M/8MD3/F8/T8/TF](#Настройка-управления-оборотами-вентиляторов-для-Huananzhi-X99-8M8MD3F8T8TF)
+3. [Unlock и Undervolting с помощью Ultimate Patcher Tool](#Ultimate-Patcher-Tool)
+4. [Отключение бипера](#Отключение-бипера)
+5. [Часто задаваемые вопросы](#Часто-задаваемые-вопросы)
+6. [О пост-кодах](#О-пост-кодах)
+7. [Если вы наблюдаете частоту системной шины меньшую, чем 99,75МГц](#Если-вы-наблюдаете-частоту-системной-шины-меньшую-чем-9975МГц)
+8. [Настройка управления оборотами вентиляторов для Huananzhi X99-8M/8MD3/F8/T8/TF](#Настройка-управления-оборотами-вентиляторов-для-Huananzhi-X99-8M8MD3F8T8TF)
 
 #### Инструкция по разблокировке макс.частоты на все ядра, а не на два (unlock)
 
@@ -205,6 +206,22 @@ Before proceeding, save important data on your system, be prepared for possible 
 Next, we move on to the cache test (you can start with -125mV). Optimally test the cache in LinX (tested on [v0.6.5](https://github.com/sanekgusev/LinX-old/releases/tag/0.6.5)), set the 8192MB memory setting, press Start. In case of instability, a blue screen is possible (usually a WHEA_UNCORRECTABLE_ERROR error). 5 minutes of the test is enough.
 
 Because to check the cache, dense data streams are needed, then it is recommended to run the test again in the future, but this time with unlock, coupled with the SVID/FIVR bug (pay special attention to the temperature during the test)
+
+#### Ultimate Patcher Tool
+
+В апреле 2021 года в свет вышла программа [Ultimate Patcher Tool](https://nalex.me/ultimate-patcher-tool/) (далее UPT) для более удобного процесса модификации биоса с целью анлока и андервольта и даже для замены логотипа. Также на некоторых биосах возможно устранение проблемы, из-за которой смартфан не работал после возвращения системы из режима сна.
+
+UPT поддерживает загрузку нужного биоса напрямую с гитхабов, также предлагает выбрать, что именно нужно модифицировать. Если не удаётся выбрать исправление смартфана, значит это пока не поддерживается для выбранного биоса.
+
+После модификации, биос нужно прошить любым способом (программатор, afuwin, fptw64, [S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar))
+
+*ВНИМАНИЕ! На данный момент проект в стадии тестирования, поэтому не прошивайте модифицированный биос, если у вас нет возможности восстановиться с помощью программатора.*
+
+В настройках BIOS, обычно в разделе IntelRCSetup, должно быть меню "OverClocking Feature", в котором будут следующие меню:
+- Processor > Core Voltage Offset (смещение напряжения ядер в мВ)
+- CLR/Ring > CLR Voltage Offset (смещение напряжения кэша в мВ)
+- Uncore > Uncore Voltage Offset (смещение напряжения SystemAgent в мВ)
+- SVID/FIVR > SVID Support (отключение равнозначно включению "Баг SVID/FIVR" в S3TT)
 
 #### Отключение бипера
 1. Нам нужны определённые модули из биоса, чтобы их получить открываем [S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar), нажимаем UEFITool и в появившейся утилите открываем биос
