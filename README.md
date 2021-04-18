@@ -220,8 +220,15 @@ UPT поддерживает загрузку нужного биоса напр
 В настройках BIOS, обычно в разделе IntelRCSetup, должно быть меню "OverClocking Feature", в котором будут следующие меню:
 - Processor > Core Voltage Offset (смещение напряжения ядер в мВ)
 - CLR/Ring > CLR Voltage Offset (смещение напряжения кэша в мВ)
-- Uncore > Uncore Voltage Offset (смещение напряжения SystemAgent в мВ)
+- Uncore > Uncore Voltage Offset (смещение напряжения SystemAgent в мВ, также стоит обратить внимание на его префикс)
 - SVID/FIVR > SVID Support (отключение равнозначно включению "Баг SVID/FIVR" в S3TT)
+
+Проверенные биосы:
+- Huananzhi X99-8M/8MD3/F8/T8/TF (25.05.2020) всё работает
+- Huananzhi X99-8M/8MD3/F8/T8/TF (17.08.2020) не работает, пост-код 79
+- Huananzhi X99-F8D/T8D (24.06.2020) всё работает, кроме смартфана
+
+Список будет пополняться, сообщайте о результатах в [Telegram группу](https://t.me/chinese_lga2011_3_x99)
 
 #### Отключение бипера
 1. Нам нужны определённые модули из биоса, чтобы их получить открываем [S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar), нажимаем UEFITool и в появившейся утилите открываем биос
