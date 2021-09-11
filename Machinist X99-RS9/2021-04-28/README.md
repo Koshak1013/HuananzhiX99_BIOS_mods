@@ -1,0 +1,2 @@
+### Machinist X99-RS9
+### BIOS 2021/04/28 (X99MA012)
