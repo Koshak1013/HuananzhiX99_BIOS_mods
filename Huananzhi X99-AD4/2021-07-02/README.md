@@ -1,0 +1,2 @@
+### Huananzhi X99-AD4
+### BIOS 2021/07/02 (AAX99018)

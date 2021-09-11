@@ -3,13 +3,14 @@
 1. [Unlock (Русский)](#Инструкция-по-разблокировке-максчастоты-на-все-ядра-а-не-на-два-unlock), [Unlock (English)](#Instructions-for-unlocking-the-maximum-frequency-for-all-cores-not-two-unlock), также доступна [Видео-инструкция](#Видео-инструкция-спасибо-Zerg_fb)
 2. [Undervolting (Русский)](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting), [Undervolting (English)](#Finding-the-optimal-voltage-offset-values-for-your-processor-undervolting)
 3. [Unlock и Undervolting с помощью Ultimate Patcher Tool](#Ultimate-Patcher-Tool)
-4. [Настройка таймингов оперативной памяти](#Настройка-таймингов-оперативной-памяти)
-5. [Отключение бипера](#Отключение-бипера)
-6. [Часто задаваемые вопросы](#Часто-задаваемые-вопросы)
-7. [О пост-кодах](#О-пост-кодах)
-8. [Если вы наблюдаете частоту системной шины меньшую, чем 99,75МГц](#Если-вы-наблюдаете-частоту-системной-шины-меньшую-чем-9975МГц)
-9. [Настройка управления оборотами вентиляторов для Huananzhi X99-8M/8MD3/F8/T8/TF](#Настройка-управления-оборотами-вентиляторов-для-Huananzhi-X99-8M8MD3F8T8TF)
-10. [Если у вас повреждён сокет](#Если-у-вас-повреждён-сокет)
+4. [Восстановление биоса программатором](#Восстановление-биоса-программатором)
+5. [Настройка таймингов оперативной памяти](#Настройка-таймингов-оперативной-памяти)
+6. [Отключение бипера](#Отключение-бипера)
+7. [Часто задаваемые вопросы](#Часто-задаваемые-вопросы)
+8. [О пост-кодах](#О-пост-кодах)
+9. [Если вы наблюдаете частоту системной шины меньшую, чем 99,75МГц](#Если-вы-наблюдаете-частоту-системной-шины-меньшую-чем-9975МГц)
+10. [Настройка управления оборотами вентиляторов для Huananzhi X99-8M/8MD3/F8/T8/TF](#Настройка-управления-оборотами-вентиляторов-для-Huananzhi-X99-8M8MD3F8T8TF)
+11. [Если у вас повреждён сокет](#Если-у-вас-повреждён-сокет)
 
 #### Инструкция по разблокировке макс.частоты на все ядра, а не на два (unlock)
 
@@ -172,7 +173,7 @@ If you have any difficulties, as well as if you have comments and suggestions, p
 4. Если всё вроде бы стабильно, значит запускаем [OCCT](https://www.ocbase.com/), выставляем режим теста "CPU/Набор данных Большой/Режим Тяжёлый/Нагрузка Переменная/Инструкции SSE/Потоки Авто". Почему SSE, а не AVX? Потому что при AVX-нагрузке процессор переходит в другой режим работы, прибавляет напряжение и снижает частоту. Это не даст результата при тестировании стабильности работы ядер. Перед запуском теста заботимся о должном охлаждении процессора, области VRM и оперативной памяти (она может троттлить без дополнительного охлаждения).
 5. Запускаем тест. Если система зависла или мы увидели синий экран (обычно ошибка CLOCK_WATCHDOG_TIMEOUT), то уменьшаем наше смещение и продолжаем тестировать до появления стабильности (1 час). Это и будет нашим значением для ядер.
 
-Далее переходим к тесту кэша (начать можно с -125mV). Тестировать кэш оптимально в LinX (проверено на [v0.6.5](https://github.com/sanekgusev/LinX-old/releases/tag/0.6.5)), выставляем настройку 8192МБ памяти, нажимаем Start. При нестабильности возможен синий экран (обычно ошибка WHEA_UNCORRECTABLE_ERROR). Достаточно 5 минут теста.
+Далее переходим к тесту кэша (начать можно с -125mV). Тестировать кэш оптимально в LinX (проверено на [v0.6.5](https://github.com/sanekgusev/LinX-old/releases/latest)), выставляем настройку 8192МБ памяти, нажимаем Start. При нестабильности возможен синий экран (обычно ошибка WHEA_UNCORRECTABLE_ERROR). Достаточно 5 минут теста.
 
 Т.к. для проверки кэша нужны плотные потоки данных, то в дальнейшем рекомендуется ещё раз провести тест, но уже с анлоком вкупе с багом SVID/FIVR (уделите особое внимание температуре во время теста)
 
@@ -205,7 +206,7 @@ Before proceeding, save important data on your system, be prepared for possible 
 4. If everything seems to be stable, then we launch the [OCCT](https://www.ocbase.com/), set the test mode "CPU/Data set Large/Mode Extreme/Load type Variable/Instruction set SSE/Threads Auto". Why SSE and not AVX? Because under AVX load, the processor switches to another operating mode, adds voltage and decreases frequency. This will not work when testing the stability of the cores. Before running the test, we take care of proper cooling of the processor, VRM area and RAM (it can throttle without additional cooling).
 5. We run the test. If the system freezes or we see a blue screen (usually the CLOCK_WATCHDOG_TIMEOUT error), then we reduce our offset and continue testing until stability appears (1 hour). This will be our core value.
 
-Next, we move on to the cache test (you can start with -125mV). Optimally test the cache in LinX (tested on [v0.6.5](https://github.com/sanekgusev/LinX-old/releases/tag/0.6.5)), set the 8192MB memory setting, press Start. In case of instability, a blue screen is possible (usually a WHEA_UNCORRECTABLE_ERROR error). 5 minutes of the test is enough.
+Next, we move on to the cache test (you can start with -125mV). Optimally test the cache in LinX (tested on [v0.6.5](https://github.com/sanekgusev/LinX-old/releases/latest)), set the 8192MB memory setting, press Start. In case of instability, a blue screen is possible (usually a WHEA_UNCORRECTABLE_ERROR error). 5 minutes of the test is enough.
 
 Because to check the cache, dense data streams are needed, then it is recommended to run the test again in the future, but this time with unlock, coupled with the SVID/FIVR bug (pay special attention to the temperature during the test)
 
@@ -226,12 +227,22 @@ UPT поддерживает загрузку нужного биоса напр
 - SVID/FIVR > SVID Support (отключение равнозначно включению "Баг SVID/FIVR" в S3TT)
 
 Проверенные биосы:
-- Huananzhi X99-8M/8MD3/F8/T8/TF (25.05.2020) всё работает
-- Huananzhi X99-8M/8MD3/F8/T8/TF (17.08.2020 и новее) !НЕ РАБОТАЕТ! - пост-код 79
-- Huananzhi X99-F8D/T8D (24.06.2020) всё работает, кроме смартфана
-- Jginyue X99M-PLUS D3 (03.11.2020) всё работает, кроме смартфана
+- Huananzhi X99-8M/8MD3/F8/T8/TF (25.05.2020 - всё работает) (17.08.2020 и новее - !НЕ РАБОТАЕТ! - пост-код 79)
+- Huananzhi X99-F8D/T8D (24.06.2020 - всё работает, кроме смартфана)
+- Jginyue X99M-PLUS D3 (03.11.2020 - всё работает, кроме смартфана)
 
 Список будет пополняться, сообщайте о результатах в [Telegram группу](https://t.me/chinese_lga2011_3_x99)
+
+#### Восстановление биоса программатором
+Процессор, оперативную память и элемент питания CR2032 извлекать необязательно. В некоторых случаях необходим подключенный БП, для дежурного напряжения (система должна быть выключена при этом).
+
+Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и снять радиатор с хаба, т.к. крепится он винтами сзади.
+
+1. Прищепку вставляем в программатор, в секцию для 25 серии SPI микросхем, соблюдая ключ. Красный провод должен быть в том же углу, где точка на изображении микросхемы.
+2. Надеваем прищепку на саму микросхему, также соблюдая совмещение красного провода с точкой на ней.
+3. Запускаем [AsProgrammer](https://github.com/nofeletru/UsbAsp-flash/releases/latest), устанавливаем необходимые драйвера (имеются в папке с программой) и жмём иконку со знаком вопроса (Read ID). Должно произойти определение модели микросхемы. Если определения не происходит, значит имеем плохой контакт с микросхемой (обычно между прищепкой и микросхемой). В случае успеха выбираем модель, в большинстве случаев это W25Q128BV. Теперь мы можем прочитать содержимое микросхемы биоса, если оно нужно, нажав иконку "Read IC". Для сохранения в файл нажимаем иконку "Save file".
+4. Для прошивки, сначала стираем содержимое, нажав на иконку "Erase IC". Далее открываем в программе файл рабочего биоса и жмём иконку "Programm IC". Процесс прошивки может длиться от нескольких минут до часа.
+5. После прошивки рекомендую прочитать содержимое микросхемы биоса, сохранить в файл, и сравнить с оригиналом, например, в программе [WinMerge](https://winmerge.org/downloads/?lang=ru).
 
 #### Настройка таймингов оперативной памяти
 1. преисполниться какнада
@@ -256,7 +267,7 @@ UPT поддерживает загрузку нужного биоса напр
 
 **Если старт прошел успешно, то проверяем объём памяти. Если он сократился, то данная конфигурация нестабильна. Если всё в порядке, то запускаем [TestMem5](https://testmem.tz.ru/tm5.rar) и ждём его завершения (обычно около 5-10 минут).**
 
-1. Запускаем в [AIDA64](https://www.aida64.com/downloads) тест кэша и памяти, в окне теста делаем двойной клик по надписи Memory, дожидаемся завершения, и записываем результаты. Также запускаем [LinX](https://github.com/sanekgusev/LinX-old/releases/tag/0.6.5) и делаем один проход с настройкой 8192МБ, записываем значение GFlops.
+1. Запускаем в [AIDA64](https://www.aida64.com/downloads) тест кэша и памяти, в окне теста делаем двойной клик по надписи Memory, дожидаемся завершения, и записываем результаты. Также запускаем [LinX](https://github.com/sanekgusev/LinX-old/releases/latest) и делаем один проход с настройкой 8192МБ, записываем значение GFlops.
 2. Создаём табличку:
 * Частота
 * tREF (Refresh Rate)
@@ -273,7 +284,7 @@ UPT поддерживает загрузку нужного биоса напр
 * tRC
 * tCWL (tWCL)
 
-В неё запишем все текущие тайминги на текущей частоте. Переходим в AIDA64 > Системная плата > Чипсет. Переписываем тайминги оттуда. tRC там не будет, а tCWL это tWCL. У tRRD и tWTR записываем значение "Diff. Bank Group".
+В неё запишем все текущие тайминги на текущей частоте. Переходим в AIDA64 > Системная плата > Чипсет. Переписываем тайминги оттуда. tRC там не будет, а tCWL=tWCL. У tRRD и tWTR записываем значение "Diff. Bank Group".
 
 3. Далее переходим в настройки биос и меняем частоту памяти на другую, например с 2133 меняем на 1866. И проделываем тоже самое, добавляем реальные тайминги в табличку. Также и с частотами 1600 и 1333.
 4. Теперь ставим нашу необходимую частоту, и переходим в раздел управления таймингами. Меняем Command Timing на 1N и тестируем на стабильность. Если тест не пройден успешно, то меняем на 2N и т.д.
