@@ -48,7 +48,7 @@
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen01.png)
 
-8. Выбираем "File > Save image file...", сохраняем. Биос готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool. Если при этом возникает ошибка 103, то следует перезагрузить систему.
+8. Выбираем "File > Save image file...", сохраняем. Биос готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool. Если при этом возникает ошибка 103, то следует перезагрузить систему. Если для модификации биоса был использован свой или чужой дамп, то после прошивки нужно сбросить настройки биоса на стандартные (в меню настроек биоса либо перемычкой).
 
 ***DXE драйвер*** (не поддерживает режим сна, поддерживает одно- и двухпроцессорные системы):
 1. В S3TurboTool нажимаем "Собрать драйвер"
@@ -62,7 +62,7 @@
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen02.png)
 
-9. Выбираем "File > Save image file...", сохраняем. Биос готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool. Если при этом возникает ошибка 103, то следует перезагрузить систему.
+9. Выбираем "File > Save image file...", сохраняем. Биос готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool. Если при этом возникает ошибка 103, то следует перезагрузить систему. Если для модификации биоса был использован свой или чужой дамп, то после прошивки нужно сбросить настройки биоса на стандартные (в меню настроек биоса либо перемычкой).
 
 ***RAW драйвер*** (поддерживает режим сна, поддерживает только однопроцессорные системы):
 
@@ -70,7 +70,7 @@
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Нажимаем в верхнем правом углу кнопку RAW и выбираем необходимый биос
 3. Настраиваем необходимые смещения напряжения. Нажимаем "Собрать и установить драйвер".
-4. Биос сохранился в ту же папку и готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool. Если при этом возникает ошибка 103, то следует перезагрузить систему.
+4. Биос сохранился в ту же папку и готов к прошивке. Прошить можно также соответствующей кнопкой в S3TurboTool. Если при этом возникает ошибка 103, то следует перезагрузить систему. Если для модификации биоса был использован свой или чужой дамп, то после прошивки нужно сбросить настройки биоса на стандартные (в меню настроек биоса либо перемычкой).
 
 Если имеются какие-то проблемы после прошивки, то джампером сбрасываем настройки CMOS
 
@@ -116,7 +116,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen01.png)
 
-8. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool. If this causes error 103, you must reboot the system.
+8. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool. If this causes error 103, you must reboot the system. If you used your own or someone else's dump to modify the BIOS, then after flashing, you need to reset the BIOS settings to the standard ones (in the BIOS settings menu or using a jumper).
 
 ***DXE driver*** (does not support sleep mode, supports single and dual processor systems):
 1. In S3TurboTool, click "Собрать драйвер"
@@ -130,7 +130,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen02.png)
 
-9. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool. If this causes error 103, you must reboot the system.
+9. Choose "File > Save image file...", save. BIOS is ready for flashing. You can also flash it with the corresponding button in S3TurboTool. If this causes error 103, you must reboot the system. If you used your own or someone else's dump to modify the BIOS, then after flashing, you need to reset the BIOS settings to the standard ones (in the BIOS settings menu or using a jumper).
 
 ***RAW driver*** (supports sleep mode, only supports uniprocessor systems):
 
@@ -138,7 +138,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 1. In S3TurboTool, click "Build Driver"
 2. Press the RAW button in the upper right corner and select the required BIOS
 3. Adjust the required voltage offsets. Click "Собрать и установить драйвер".
-4. The BIOS is saved in the same folder and is ready for flashing. You can also flash it with the corresponding button in S3TurboTool. If this causes error 103, you must reboot the system.
+4. The BIOS is saved in the same folder and is ready for flashing. You can also flash it with the corresponding button in S3TurboTool. If this causes error 103, you must reboot the system. If you used your own or someone else's dump to modify the BIOS, then after flashing, you need to reset the BIOS settings to the standard ones (in the BIOS settings menu or using a jumper).
 
 If problems arise after the firmware, use the jumper to reset the CMOS settings
 
