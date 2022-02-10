@@ -300,6 +300,8 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 
 [![](https://i.ytimg.com/vi/2UdU4n6B0V8/mqdefault.jpg)](https://youtu.be/2UdU4n6B0V8)
 
+https://youtu.be/2UdU4n6B0V8
+
 *(за видеоинструкцию спасибо Ilyme)*
 
 Также есть две другие инструкции.
