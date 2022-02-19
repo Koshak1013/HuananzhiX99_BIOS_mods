@@ -1,14 +1,12 @@
 ### Huananzhi X99-T8
 ### BIOS 2020/05/25 (GHX99015)
 
-Внимание! С мат.платами, заказанными примерно с августа 2021 года, данная версия биоса несовместима в 50% случаев. Для восстановления требуется программатор.
-
     + При использовании серверной (ECC) памяти активна функция коррекции ошибок
     + Тайминг Command Rate (CR) может принимать любое заданное значение от 1 до 3
 
 [Для удаления сигналов бипера](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods#%D0%9E%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B1%D0%B8%D0%BF%D0%B5%D1%80%D0%B0), достаточно отключить код только в модуле Bds
 
-Данный биос совместим с [Ultimate Patcher Tool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods#Ultimate-Patcher-Tool)
+Данный биос совместим с [Ultimate Patcher Tool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods#Ultimate-Patcher-Tool) (рекомендуется последняя версия программы)
 
 *v007:*
 * + микрокод для V4 и Realtek UNDI Driver обновлены до актуальных версий
