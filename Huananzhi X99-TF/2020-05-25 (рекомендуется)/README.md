@@ -6,6 +6,8 @@
 
 Данный биос совместим с [Ultimate Patcher Tool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods#Ultimate-Patcher-Tool) (рекомендуется последняя версия программы)
 
+Для мат.плат, купленных после весны 2021, данный биос необходимо патчить в последней версии Ultimate Patcher Tool
+
 Также доступна версия с отключённым бипером
 
 *v009:*

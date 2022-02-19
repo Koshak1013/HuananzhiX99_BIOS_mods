@@ -8,6 +8,8 @@
 
 Данный биос совместим с [Ultimate Patcher Tool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods#Ultimate-Patcher-Tool) (рекомендуется последняя версия программы)
 
+Для мат.плат, купленных после весны 2021, данный биос необходимо патчить в последней версии Ultimate Patcher Tool
+
 *v007:*
 * + микрокод для V4 и Realtek UNDI Driver обновлены до актуальных версий
 * + открыты пункты меню "SOCKET RAPL Config", "Per-Socket Configuration" и "PCI Subsystem Settings" *спасибо Pavlon и MacArrow*
