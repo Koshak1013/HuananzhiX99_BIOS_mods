@@ -172,7 +172,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 
 Подойдут несколько программ для изменения напряжения. Intel XTU, QuickCPU и ThrottleStop. В общем виде инструкция такая: снижаем напряжение процессора, тестируем разными программами в нагрузке, если хорошо, то оставляем на длительное использование. Обычно рабочим снижением будет считаться от 40 до 90, в зависимости от модели процессора и конкретного экземпляра. (для L процессоров может быть рабочим и 120).
 
-Вторым шагом снижаем напряжение на кэше процессора (Cache). Обычно в драйверах выбирается значение 50-60, но на практике оно легко может превышать и 120. Нестабильность проверять программой LinX с AVX-инструкциями и программами, сильно нагружающими память (к примеру TestMem5). Снижение третьего напряжения - SystemAgent, мало изучено, но стандартное снижение 0 или 50.
+Вторым шагом снижаем напряжение на кэше процессора (Cache). Обычно в драйверах выбирается значение 50-60, но на практике оно легко может превышать и 120. Нестабильность проверять программой LinX с AVX-инструкциями и программами, сильно нагружающими память (к примеру TestMem5).
 
 После нахождения значений, при которых система стабильно работает как в простое, так и в нагрузке, можно данные значения прошивать в биос материнской платы.
 
@@ -227,7 +227,7 @@ As you know, China boards do not allow to adequately, in the usual form, change 
 
 Several programs are suitable for changing the voltage. Intel XTU, QuickCPU and ThrottleStop. In general, the instruction is as follows: we lower the processor voltage, test it with different programs in the load, if it is good, then we leave it for long-term use. Typically, a working degradation will be considered from 40 to 90, depending on the processor model and specific instance. (for L processors, 120 can be working).
 
-The second step is to lower the voltage on the processor cache. Usually the driver chooses a value of 50-60, but in practice it can easily exceed 120. Check the instability with the LinX program with AVX-instructions and programs that heavily load memory (for example TestMem5). Reduction of the third voltage - SystemAgent, little studied, but the standard decrease is 0 or 50.
+The second step is to lower the voltage on the processor cache. Usually the driver chooses a value of 50-60, but in practice it can easily exceed 120. Check the instability with the LinX program with AVX-instructions and programs that heavily load memory (for example TestMem5).
 
 After finding the values ​​at which the system works stably both in idle and in load, these values ​​can be flashed into the BIOS of the motherboard.
 
