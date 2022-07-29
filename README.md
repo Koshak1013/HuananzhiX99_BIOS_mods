@@ -1,3 +1,7 @@
+***[Telegram группа](https://t.me/chinese_lga2011_3_x99)***
+
+***[Discord сервер](https://discord.gg/BNRJ9WVH2n)***
+
 #### Оглавление
 
 1. [Unlock (Русский)](#Инструкция-по-разблокировке-максчастоты-на-все-ядра-а-не-на-два-unlock), [Unlock (English)](#Instructions-for-unlocking-the-maximum-frequency-for-all-cores-not-two-unlock), также доступна [Видео-инструкция](#Видео-инструкция-спасибо-Zerg_fb)
