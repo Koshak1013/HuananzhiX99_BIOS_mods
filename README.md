@@ -1,6 +1,6 @@
 ***[> Telegram группа](https://t.me/chinese_lga2011_3_x99)***
 
-***[> Discord сервер](https://discord.gg/BNRJ9WVH2n)***
+***[> Discord сервер](https://discord.gg/YTtC6vwAVz)***
 
 #### Оглавление
 
