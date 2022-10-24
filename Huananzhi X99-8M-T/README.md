@@ -1,5 +1,5 @@
 ### Huananzhi X99-8M-T
-### BIOS 2020/10/15 (X99MA011) для хаба B85
+### BIOS 2020/10/15 (X99MA011)
 
 *v001:*
 * открыт доступ к настройке таймингов (название пункта "Memory Timings & Voltage Override")
