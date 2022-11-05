@@ -6,9 +6,18 @@
 
 Данный биос совместим с [Ultimate Patcher Tool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods#Ultimate-Patcher-Tool) (рекомендуется последняя версия программы)
 
-Для мат.плат, купленных после весны 2021, данный биос необходимо патчить в последней версии Ultimate Patcher Tool
-
 Также доступна версия с отключённым бипером
+
+*v011:*
+* + добавлена поддержка Resizable BAR (SAM)* обновлено лого на официальное (взято из новой версии биос) и включено его отображение по умолчанию
+* добавлено +3.3V в HardwareMonitor
+* основа биоса GHX99015
+* обновлены микрокоды и Realtek Boot Agent GE, добавлен Realtek UNDI Driver, удалено лишнее (Matrox GOP и Intel Gbit)
+* настроено управление оборотами вентилятора процессора (<45°=30%/>80°=100%)
+* исправлена дата биоса в его настройках
+* пункты меню "Memory Frequency" и "OverClocking Feature" больше не будут пропадать
+* открыты пункты меню "Memory Thermal", "CPU C State Control", "Program PP0_CURT_CFG_CTRL_MSR", "SOCKET RAPL Config", "Per-Socket Configuration" и "PCI Subsystem Settings"
+* BCLK 100.00MHz (0.00% SSC)
 
 *v010:*
 * + открыт пункт меню "Memory Thermal"
@@ -16,7 +25,6 @@
 * обновлено лого на официальное (взято из новой версии биос) и включено его отображение по умолчанию
 * добавлено +3.3V в HardwareMonitor
 * основа биоса GHX99015
-* включена поддержка ASPM
 * обновлены микрокоды и Realtek Boot Agent GE, добавлен Realtek UNDI Driver, удалено лишнее (Matrox GOP и Intel Gbit)
 * настроено управление оборотами вентилятора процессора (<45°=30%/>80°=100%)
 * исправлена дата биоса в его настройках
