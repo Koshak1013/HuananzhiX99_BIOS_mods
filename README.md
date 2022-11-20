@@ -383,7 +383,19 @@ https://youtu.be/2UdU4n6B0V8
 
 #### Добавление поддержки Resizable BAR в биос
 
+1. Скачиваем [ReBarDxe.ffs](https://github.com/xCuri0/ReBarUEFI/releases/download/0.1/ReBarDxe.ffs) и [ReBarState.exe](https://github.com/xCuri0/ReBarUEFI/releases/download/0.1/ReBarState.exe)
+2. Открываем в [UEFITool 0.28.0](https://github.com/LongSoft/UEFITool/releases/tag/0.28.0) файл биоса
+3. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(предпоследний, второй снизу, в котором DXE драйверы) >"
+4. Прокручиваем в самый низ и находим последний DXE драйвер в списке
+5. Правый клик по нему, нажимаем "Insert after...", выбираем скачанный ранее файл ReBarDxe.ffs
+6. Выбираем "File > Save image file...", сохраняем. Прошиваем.
+7. Активируем настройку Above4GDecoding
+8. Из под Windows запускаем ReBarState.exe и вводим две цифры "32" и нажимаем ввод. Перезагружаемся.
+9. В [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/) можно проверить состояние ReBar, в т.ч. выполнение каждого условия для активации
 
+Также есть видеоинструкция
+
+[![](https://i.ytimg.com/vi/CR7QV135ANw/mqdefault.jpg)](https://youtu.be/CR7QV135ANw)
 
 #### Отключение бипера
 
