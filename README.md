@@ -375,7 +375,11 @@ https://youtu.be/2UdU4n6B0V8
 
 #### Как открыть скрытые пункты меню настроек биоса
 
+Для этого понадобится программа AMIBCP (имеется в составе [S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar))
 
+Открываем биос в ней файл биоса и видим структуру меню биоса. Находим необходимый скрытый пункт меню и меняем значение параметра "Access/Use" с "Default" на "USER". Если данный раздел меню также является скрытым, то переходим в вышестоящий раздел и открываем также доступ к нужному. Также есть видеоинструкция.
+
+[![](https://i.ytimg.com/vi/BddkZIsLN_k/mqdefault.jpg)](https://youtu.be/BddkZIsLN_k)
 
 #### Добавление поддержки Resizable BAR в биос
 
