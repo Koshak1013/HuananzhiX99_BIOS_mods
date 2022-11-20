@@ -34,7 +34,7 @@
     * "CPU C3 report" на "Enable"
     * "CPU C6 report" на "Disable"
 9. Закрываем окно AMIBCP и соглашаемся на сохранение внесённых изменений
-10. Если система двухпроцессорная, то переходим к созданию DXE драйвера. Для однопроцессорных систем нужно проверить, есть ли в нашем биосе модуль PchS3Peim. В S3TurboTool нажимаем UEFITool.
+10. ***Если система двухпроцессорная, то переходим к созданию DXE драйвера. Для однопроцессорных систем нужно проверить, есть ли в нашем биосе модуль PchS3Peim.*** В S3TurboTool нажимаем UEFITool.
 11. В появившейся утилите UEFITool открываем биос
 12. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(самый нижний, в котором PEI драйверы) >"
 13. Примерно среди первых 20 значений ищем 271DD6F2-... (модуль PchS3Peim). Если такой есть, значит будем собирать PEI драйвер. Если такого нет, значит соберём DXE драйвер.
@@ -76,8 +76,9 @@
 
 *Если для модификации биоса был использован свой или чужой дамп, то после прошивки нужно сбросить настройки биоса на стандартные (в меню настроек биоса либо перемычкой).*
 
-***RAW драйвер*** (поддерживает режим сна, поддерживает только однопроцессорные системы):
+***RAW драйвер*** (поддерживает режим сна, поддерживает только однопроцессорные системы, не поддерживает анлок режима AVX):
 
+***Китайские материнские платы не нуждаются в этом драйвере и для них не рекомендуется делать анлок данным способом. Только для крайних случаев, для необычных брендовых материнских плат.***
 *ВНИМАНИЕ! После установки RAW драйвера не редактируйте этот биос любыми программами, в противном случае биос станет неработоспособным.*
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Нажимаем в верхнем правом углу кнопку RAW и выбираем необходимый биос
@@ -112,7 +113,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
     * "CPU C3 report" to "Enable"
     * "CPU C6 report" to "Disable"
 9. Close the AMIBCP window and agree to save the changes made
-10. If the system is dual-processor, then proceed to creating the DXE driver. For uniprocessor systems, you need to check if there is a PchS3Peim module in our BIOS. In S3TurboTool, click UEFITool.
+10. ***If the system is dual-processor, then proceed to creating the DXE driver. For uniprocessor systems, you need to check if there is a PchS3Peim module in our BIOS.*** In S3TurboTool, click UEFITool.
 11. In the UEFITool utility that appears, open the BIOS
 12. We open the list and follow the path "Intel image > BIOS region > 8C8CE578-...(the lowest one, in which the PEI drivers) >"
 13. We are looking for 271DD6F2-... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI driver. If this is not the case, then we will build the DXE driver.
@@ -154,8 +155,9 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 
 *If you used your own or someone else's dump to modify the BIOS, then after flashing, you need to reset the BIOS settings to the standard ones (in the BIOS settings menu or using a jumper).*
 
-***RAW driver*** (supports sleep mode, only supports uniprocessor systems):
+***RAW driver*** (supports sleep mode, only supports uniprocessor systems, does not support AVX mode unlock):
 
+***Chinese motherboards do not need this driver and it is not recommended to unlock them in this way. Only as a last resort, for unusual branded boards.***
 *ATTENTION! After installing the RAW driver, do not edit this BIOS with any programs, otherwise the BIOS will become inoperable.*
 1. In S3TurboTool, click "Build Driver"
 2. Press the RAW button in the upper right corner and select the required BIOS
