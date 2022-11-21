@@ -94,7 +94,7 @@
 
 ***При возникновении трудностей, а также если у Вас есть замечания и пожелания, обращайтесь в [Telegram группу](https://t.me/russian_xeon_community)***
 
-#### Видео-инструкция *(спасибо Zerg_fb)*:
+#### [Видео-инструкция](https://youtu.be/2hfhdrIrXR4) *(спасибо Zerg_fb)*:
 
 [![](https://i.ytimg.com/vi/2hfhdrIrXR4/mqdefault.jpg)](https://youtu.be/2hfhdrIrXR4)
 
