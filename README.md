@@ -305,13 +305,11 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 
 #### Настройка таймингов оперативной памяти
 
-Лучший полный гайд. Рекомендуется к освоению.
+[Видео-инструкция](https://youtu.be/2UdU4n6B0V8). Рекомендуется к освоению.
 
 [![](https://i.ytimg.com/vi/2UdU4n6B0V8/mqdefault.jpg)](https://youtu.be/2UdU4n6B0V8)
 
-https://youtu.be/2UdU4n6B0V8
-
-*(за видеоинструкцию спасибо Ilyme)*
+*(спасибо Ilyme)*
 
 Также есть две другие инструкции.
 
@@ -377,7 +375,9 @@ https://youtu.be/2UdU4n6B0V8
 
 Для этого понадобится программа AMIBCP (имеется в составе [S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar))
 
-Открываем в ней файл биоса и видим структуру меню. Находим необходимый скрытый пункт меню и меняем значение параметра "Access/Use" с "Default" на "USER". Если данный раздел меню также является скрытым, то переходим в вышестоящий раздел и открываем к нему доступ. Также есть видеоинструкция.
+Открываем в ней файл биоса и видим структуру меню. Находим необходимый скрытый пункт меню и меняем значение параметра "Access/Use" с "Default" на "USER". Если данный раздел меню также является скрытым, то переходим в вышестоящий раздел и открываем к нему доступ.
+
+Также есть [видео-инструкция](https://youtu.be/BddkZIsLN_k)
 
 [![](https://i.ytimg.com/vi/BddkZIsLN_k/mqdefault.jpg)](https://youtu.be/BddkZIsLN_k)
 
@@ -393,7 +393,7 @@ https://youtu.be/2UdU4n6B0V8
 8. Из под Windows запускаем ReBarState.exe и вводим две цифры "32" и нажимаем ввод. Перезагружаемся.
 9. В [GPU-Z](https://www.techpowerup.com/download/techpowerup-gpu-z/) можно проверить состояние ReBar, в т.ч. выполнение каждого условия для активации
 
-Также есть видеоинструкция
+Также есть [видео-инструкция](https://youtu.be/CR7QV135ANw)
 
 [![](https://i.ytimg.com/vi/CR7QV135ANw/mqdefault.jpg)](https://youtu.be/CR7QV135ANw)
 
