@@ -19,7 +19,7 @@
 13. [Настройка управления оборотами вентиляторов для Huananzhi X99-8M/8MD3/F8/T8/TF](#Настройка-управления-оборотами-вентиляторов-для-Huananzhi-X99-8M8MD3F8T8TF)
 14. [Если у вас повреждён сокет](#Если-у-вас-повреждён-сокет)
 
-#### Инструкция по разблокировке макс.частоты на все ядра, а не на два (unlock)
+## Инструкция по разблокировке макс.частоты на все ядра, а не на два (unlock)
 
 Перед началом убедитесь, что используете [актуальную версию S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar)
 
@@ -94,11 +94,11 @@
 
 ***При возникновении трудностей, а также если у Вас есть замечания и пожелания, обращайтесь в [Telegram группу](https://t.me/russian_xeon_community)***
 
-#### [Видео-инструкция](https://youtu.be/2hfhdrIrXR4) *(спасибо Zerg_fb)*:
+## [Видео-инструкция](https://youtu.be/2hfhdrIrXR4) *(спасибо Zerg_fb)*:
 
 [![](https://i.ytimg.com/vi/2hfhdrIrXR4/mqdefault.jpg)](https://youtu.be/2hfhdrIrXR4)
 
-#### Instructions for unlocking the maximum frequency for all cores, not two (unlock)
+## Instructions for unlocking the maximum frequency for all cores, not two (unlock)
 
 Make sure you are using the [latest version of S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar) before starting.
 
@@ -173,7 +173,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 
 ***If you have any difficulties, as well as if you have comments and suggestions, please contact the [Telegram group](https://t.me/russian_xeon_community)***
 
-#### Подбор оптимальных значений смещения напряжений на вашем процессоре (undervolting)
+## Подбор оптимальных значений смещения напряжений на вашем процессоре (undervolting)
 
 **Сначала изучите теорию, потом переходите к инструкции!**
 
@@ -230,7 +230,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 
 *(помощь в составлении инструкции ***Data Name ID***)*
 
-#### Finding the optimal voltage offset values ​​for your processor (undervolting)
+## Finding the optimal voltage offset values ​​for your processor (undervolting)
 ---
 As you know, China boards do not allow to adequately, in the usual form, change the processor voltage for 26xx v3 (46xx v3) systems. When using a turbo-boost unlock, a voltage reduction is used to make the processor work longer or at a higher frequency. But voltage reduction by offset occurs simultaneously in all modes (there are more than three of them). And the most problematic part is stress in idle time. Thus, when selecting an unlock driver with numbers, for example "V3_MOF_705050.fss", the processor voltage decreases by 0.07V in all operating modes, the processor cache decreases by 0.05V in all operating modes. Experience has shown that instability, in the overwhelming majority of cases, manifests itself in a system idle state (inactivity). Thus, it is possible, without using an unlock, in the normal mode, to reduce the processor frequency by offset and conduct testing without fear of BIOS firmware and similar related problems. And in the future, when the processor idle operating voltages are known, reduce them once and for all by the BIOS using the program (S3TurboTool Sergey Bakaev ser8989). The change will occur with the help of software, and when the system hangs or reboots, everything will return to its original state.
 
@@ -263,7 +263,7 @@ Next, we move on to the cache test (you can start with -125mV). Optimally test t
 
 Because to check the cache, dense data streams are needed, then it is recommended to run the test again in the future, but this time with unlock, coupled with the SVID/FIVR bug (pay special attention to the temperature during the test)
 
-#### Ultimate Patcher Tool
+## Ultimate Patcher Tool
 
 В апреле 2021 года в свет вышла программа [Ultimate Patcher Tool](https://nalex.me/ultimate-patcher-tool/) (далее UPT) для более удобного процесса модификации биоса с целью анлока и андервольта и даже для замены логотипа. Также на некоторых биосах возможно устранение проблемы, из-за которой смартфан не работал после возвращения системы из режима сна.
 
@@ -286,7 +286,7 @@ UPT поддерживает загрузку нужного биоса напр
 
 Список будет пополняться, сообщайте о результатах в [Telegram группу](https://t.me/russian_xeon_community)
 
-#### Восстановление биоса программатором
+## Восстановление биоса программатором
 Процессор, оперативную память и элемент питания CR2032 извлекать необязательно. В некоторых случаях необходим подключенный БП, для дежурного напряжения (система должна быть выключена при этом).
 
 Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и снять радиатор с хаба, т.к. крепится он винтами сзади.
@@ -303,7 +303,7 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 8. Для прошивки, сначала стираем содержимое, нажав на иконку "Erase IC". Далее открываем в программе файл рабочего биоса и жмём иконку "Programm IC". Процесс прошивки может длиться от нескольких минут до часа.
 9. После прошивки рекомендую прочитать содержимое микросхемы биоса, сохранить в файл, и сравнить с оригиналом, например, в программе [WinMerge](https://winmerge.org/downloads/?lang=ru).
 
-#### Настройка таймингов оперативной памяти
+## Настройка таймингов оперативной памяти
 
 [Видео-инструкция](https://youtu.be/2UdU4n6B0V8). Рекомендуется к освоению.
 
@@ -363,7 +363,7 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 9. Снижаем остальные тайминги до уровня, которые по табличке рядом с теми же tRP и tRCD что получились у нас. tRC определяем как tRCD+tRAS.
 10. По итогу делаем тест кэша и памяти и тест в LinX, и радуемся возросшей производительности. Также результатами можно поделиться в [Telegram группе](https://t.me/russian_xeon_community), там же можно задать любой возникший вопрос.
 
-#### Что делать, если пропадает загрузка системы
+## Что делать, если пропадает загрузка системы
 
 Столкнуться с данной проблемой можно, если система установлена на диск со стилем разделов GPT. Обычно после сброса биоса первая загрузка выполняется нормально, а после перезагрузки видим ошибку, т.к. загрузчик вовсе пропадает.
 
@@ -371,7 +371,7 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen11.jpg)
 
-#### Как открыть скрытые пункты меню настроек биоса
+## Как открыть скрытые пункты меню настроек биоса
 
 Для этого понадобится программа AMIBCP (имеется в составе [S3TurboTool](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/S3TurboTool_v1.53cat_S3THv1_DXETHv1_RAWTHv1b.rar))
 
@@ -381,7 +381,7 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 
 [![](https://i.ytimg.com/vi/BddkZIsLN_k/mqdefault.jpg)](https://youtu.be/BddkZIsLN_k)
 
-#### Добавление поддержки Resizable BAR в биос
+## Добавление поддержки Resizable BAR в биос
 
 1. Скачиваем [ReBarDxe.ffs](https://github.com/xCuri0/ReBarUEFI/releases/download/0.1/ReBarDxe.ffs) и [ReBarState.exe](https://github.com/xCuri0/ReBarUEFI/releases/download/0.1/ReBarState.exe)
 2. Открываем в [UEFITool 0.28.0](https://github.com/LongSoft/UEFITool/releases/tag/0.28.0) файл биоса
@@ -397,7 +397,7 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 
 [![](https://i.ytimg.com/vi/CR7QV135ANw/mqdefault.jpg)](https://youtu.be/CR7QV135ANw)
 
-#### Отключение бипера
+## Отключение бипера
 
 ***Старый метод, крайне редко работающий, поэтому рекомендую сразу обращаться в [Telegram группу](https://t.me/russian_xeon_community).***
 
@@ -416,7 +416,7 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 
 *Если бипер по-прежнему издаёт звуки, то попробуйте также обработать модуль StatusCodePei (в разделе с PEI модулями).*
 
-#### Часто задаваемые вопросы
+## Часто задаваемые вопросы
 ---
 ***Вопрос:*** В чём преимущество нового драйвера от S3TurboTool перед драйверами от payne и MOF?
 
@@ -452,7 +452,7 @@ KOT JIETA - 5228-6005-4997-9898 (Сбербанк)
 
 ---
 
-#### О пост-кодах
+## О пост-кодах
 
 Помните, что при любой проблеме стоит осмотреть сокет на наличие повреждений и очистить контакты процессора, если это лично вы не делали и не уверены в этом. Также пробуйте сбросить настройки биоса перемычкой.
 
@@ -474,7 +474,7 @@ KOT JIETA - 5228-6005-4997-9898 (Сбербанк)
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen07.png)
 ![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen08.png)
 
-#### Если вы наблюдаете частоту системной шины меньшую, чем 99,75МГц
+## Если вы наблюдаете частоту системной шины меньшую, чем 99,75МГц
 Например, 98МГц. В таком случае вы не получите 100МГц, даже если прошьёте соответствующий биос. Насколько известно на данное время, частоту занижает активный Hyper-V в ОС.
 
 *(спасибо ***Василию Пупкину***)*
@@ -483,7 +483,7 @@ KOT JIETA - 5228-6005-4997-9898 (Сбербанк)
 
 *(спасибо ***C0oo1D***)*
 
-#### Настройка управления оборотами вентиляторов для Huananzhi X99-8M/8MD3/F8/T8/TF
+## Настройка управления оборотами вентиляторов для Huananzhi X99-8M/8MD3/F8/T8/TF
 
 Представляет собой настраиваемую кривую зависимости оборотов от температуры процессора. Настраиваются пять точек этой кривой. Т1 определяет температуру, до достижения которой будут обороты, определённые в PWM1 (значение в %). T5 определяет температуру, после достижения которой будут 100% обороты. T2/T3/T4 являются промежуточными точками, с помощью которых возможно построить кривую между T1 и T5.
 
@@ -514,7 +514,7 @@ KOT JIETA - 5228-6005-4997-9898 (Сбербанк)
 
 Также имеется проблема, из-за которой нарушается работа управления оборотами после выхода системы из режима сна. Обороты CPU_FAN1 фиксируются на значении 50%, а обороты CPU_FAN2 (X99-T8/TF) на значении 100%. В программе [Ultimate Patcher Tool](#Ultimate-Patcher-Tool) есть исправление этой проблемы для биоса 2020-05-25.
 
-#### Если у вас повреждён сокет
+## Если у вас повреждён сокет
 
 Аккуратно править ножки сокета, например, зубочисткой или подобным предметом.
 
