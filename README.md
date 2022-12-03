@@ -2,6 +2,8 @@
 
 ***[> Discord сервер](https://discord.gg/mRNBU5YpzW)***
 
+***[> VK биосы](https://vk.com/board217000803)***
+
 ## Оглавление
 
 1. [Unlock (Русский)](#Инструкция-по-разблокировке-максчастоты-на-все-ядра-а-не-на-два-unlock), [Unlock (English)](#Instructions-for-unlocking-the-maximum-frequency-for-all-cores-not-two-unlock), также доступна [Видео-инструкция](#Видео-инструкция-спасибо-Zerg_fb)
