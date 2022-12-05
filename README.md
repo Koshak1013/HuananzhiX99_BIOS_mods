@@ -2,7 +2,7 @@
 
 ***[> Discord сервер](https://discord.gg/mRNBU5YpzW)***
 
-***[> VK биосы](https://vk.com/board217000803)***
+***[> VK Community](https://vk.com/koshak1013)***
 
 ## Оглавление
 
