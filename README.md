@@ -2,7 +2,9 @@
 
 ***[> Discord сервер](https://discord.gg/mRNBU5YpzW)***
 
-***[> VK Community](https://vk.com/koshak1013)***
+***[> VK Community X99](https://vk.com/koshak1013)***
+
+***[> VK Community X79](https://vk.com/huanan_x79)***
 
 ## Оглавление
 
