@@ -387,7 +387,7 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 
 ## Добавление поддержки Resizable BAR в биос
 
-1. Скачиваем [ReBarDxe.ffs](https://github.com/xCuri0/ReBarUEFI/releases/download/0.1/ReBarDxe.ffs) и [ReBarState.exe](https://github.com/xCuri0/ReBarUEFI/releases/download/0.1/ReBarState.exe)
+1. Скачиваем [ReBarDxe.ffs и ReBarState.exe](https://github.com/xCuri0/ReBarUEFI/releases/latest)
 2. Открываем в [UEFITool 0.28.0](https://github.com/LongSoft/UEFITool/releases/tag/0.28.0) файл биоса
 3. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(предпоследний, второй снизу, в котором DXE драйверы) >"
 4. Прокручиваем в самый низ и находим последний DXE драйвер в списке
