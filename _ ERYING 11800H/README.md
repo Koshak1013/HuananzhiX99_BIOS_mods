@@ -39,7 +39,7 @@
 
 ## Как сделать андервольт
 
-OverClocking Performance Menu > OverClocking Feature > Enabled, далее Processor > Core Voltage Offset Prefix ставим на "-" и в Core Voltage Offset вводим желаем смещение в миливольтах, например 50
+OverClocking Performance Menu > OverClocking Feature > Enabled, далее Processor > Core Voltage Offset Prefix ставим на "-" и в Core Voltage Offset вводим желаемое смещение в миливольтах, например 50
 
 ## Как включить встроенное видео
 
