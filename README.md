@@ -373,7 +373,7 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 
 Для решения данной проблемы переходим в меню "Advanced > CSM Configuration" и меняем значение пункта "Boot option filter" на "UEFI only"
 
-![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen11.jpg)
+![](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/raw/master/.git_images/screen11.png)
 
 ## Как открыть скрытые пункты меню настроек биоса
 
