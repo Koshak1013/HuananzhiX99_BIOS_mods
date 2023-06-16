@@ -1,6 +1,8 @@
 ### Erying 11gen
 
-Годная сборочка с али, ссылок не будет, не реклама. Адекватная цена до ~13000р. за вариант с i7-11800H или выше (апрель 2023), далее можно рассматривать что-то на i5-12400.
+Годная сборочка с али, ссылок не будет, не реклама. Адекватная цена до ~13000р. за вариант с i7-11800H или выше (апрель 2023), далее можно рассматривать что-то на обычном i5-12400 и обычной материнке.
+
+ES 11800H отличается от ES 11980H только разгонным потенциалом. Оба имеют своб.множитель. У первого макс.стабильность на 4.60GHz в среднем, у второго на 4.8GHz.
 
 Три биоса, оригинальный, модифицированный оригинал, и так называемый графический биос с молниями, который кому-то удобен, но я его не рекомендую, хотя бы потому что в нём не работает разгон.
 
@@ -32,13 +34,15 @@
 
 Можно настроить TDP, под вашу систему охлаждения, либо вовсе снять лимиты - Power & Performance > CPU - Power Management Control > View/Configure Turbo Options > Power Limit 1 Override > Enabled. Далее вводим в Power Limit 1 и 2 значение желаемого TDP в миливаттах, т.е. для 45W вводим 45000.
 
-Чтобы изменение сработало, нужно снять блокировку - Power & Performance > CPU - Power Management Control > View/Configure CPU Lock Options > Overclocking Lock > Disabled
+Чтобы изменение сработало, нужно снять блокировку - Power & Performance > CPU - Power Management Control > View/Configure CPU Lock Options > Overclocking Lock & CFG Lock > Disabled
 
 ## Как настроить множители
 
 В меню Power & Performance > CPU - Power Management Control > View/Configure Turbo Options > Core Turbo Ratio Limit Ratio (TRLR) Override вводим желаемые множители (например, максимальные)
 
-Чтобы изменение сработало, нужно снять блокировку - Power & Performance > CPU - Power Management Control > View/Configure CPU Lock Options > Overclocking Lock > Disabled
+OverClocking Performance Menu > OverClocking Feature > Enabled, далее Processor > Per Core Ratio Override > Enabled, далее вводим множители в Core Max OC Ratio и каждый Core Max Ratio
+
+Чтобы изменение сработало, нужно снять блокировку - Power & Performance > CPU - Power Management Control > View/Configure CPU Lock Options > Overclocking Lock & CFG Lock > Disabled
 
 ## Как сделать андервольт
 
@@ -55,6 +59,20 @@ System Agent (SA) Configuration > Graphics Configuration > Primary Display > IGF
 System Agent (SA) Configuration > Memory Configuration > Sets the gear ratio when SAGV is disabled > ставим "1", для достижения лучших показателей задержки, либо "2" для увеличения разгонного потенциала по частоте памяти
 
 System Agent (SA) Configuration > Memory Configuration > Memory > Memory profile, выбираем свой XMP или Custom (ручная настройка)
+
+В Memory voltage можно повысить напряжение памяти
+
+Для взятия частот выше, чем 3200, может быть необходимо увеличить напряжение на Uncore
+
+Мои результаты такие (память 2шт. Crucial Ballistix BL16G32C16U4BL.16FE):
+
+3333MHz 16-18-18-36 / SA+50mV
+
+3466MHz 16-18-18-36 / SA+100mV
+
+3600MHz 16-19-19-36 / SA+150mV (результат в тесте AIDA64 около 55900/55900/51700/60ns)
+
+Стабильность проверяйте в нормальных тестах, например testmem5 с профилем Extreme1 @anta777
 
 ## Как включить ReBAR
 
