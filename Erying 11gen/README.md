@@ -79,9 +79,9 @@ System Agent (SA) Configuration > Graphics Configuration > Internal Graphics > E
 
 На этой страничке [выложены](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/blob/master/Erying%2011gen/drivers_erying11gen.zip) драйверы для:
 
-Intel SMBus (чтобы установить, щёлкаем ПКМ по tigerlakepch-hsystem.inf и выбираем "Установить")
+    - Intel SMBus (чтобы установить, щёлкаем ПКМ по tigerlakepch-hsystem.inf и выбираем "Установить")
 
-остальные неизвестные устройства в Диспетчере устройств (HM570_serialIO.exe)
+    - остальные неизвестные устройства в Диспетчере устройств (HM570_serialIO.exe)
 
 для встроенной графики актуальный драйвер на [сайте Intel](https://www.intel.ru/content/www/ru/ru/download/726609/intel-arc-iris-xe-graphics-whql-windows.html), а также можно скачать с [TechPowerUp](https://www.techpowerup.com/download/intel-graphics-drivers)
 
