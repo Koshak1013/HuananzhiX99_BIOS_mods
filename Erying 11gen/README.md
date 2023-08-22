@@ -63,6 +63,7 @@ OverClocking Performance Menu > OverClocking Feature > Enabled, далее Proce
 OverClocking Performance Menu > OverClocking Feature > Enabled, далее Processor > Core Voltage Offset Prefix ставим на "-" и в Core Voltage Offset вводим желаемое смещение в миливольтах, например 50
 
 Тестировать стабильность рекомендую в [OCCT](https://www.ocbase.com/) с такими настройками:
+
     - Вкладка: CPU
     - Набор данных: Большой
     - Режим: Тяжёлый
@@ -100,7 +101,7 @@ Custom профиль лучше запускать с напряжением 1.
 
 3466MHz 16-18-18-36 / Uncore+100mV
 
-3600MHz 16-19-19-36 / Uncore+150mV (результат в тесте AIDA64 около 55900/55900/51700/60ns)
+3600MHz 16-19-19-36 / Uncore+170mV (результат в тесте AIDA64 около 55300/52500/52500/60ns)
 
 Стабильность проверяйте в нормальных тестах, например [testmem5 с профилем Extreme1 @anta777](https://github.com/Koshak1013/HuananzhiX99_BIOS_mods/blob/master/TM5.zip)
 
