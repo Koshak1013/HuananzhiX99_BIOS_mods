@@ -83,7 +83,7 @@ Intel SMBus (чтобы установить, щёлкаем ПКМ по tigerla
 
 остальные неизвестные устройства в Диспетчере устройств (HM570_serialIO.exe)
 
-для встроенной графики актуальный драйвер на сайте Intel, [вот ссылка](https://www.intel.ru/content/www/ru/ru/download/726609/intel-arc-iris-xe-graphics-whql-windows.html)
+для встроенной графики актуальный драйвер на [сайте Intel](https://www.intel.ru/content/www/ru/ru/download/726609/intel-arc-iris-xe-graphics-whql-windows.html), а также можно скачать с [TechPowerUp](https://www.techpowerup.com/download/intel-graphics-drivers)
 
 ## Как настроить оперативную память
 
