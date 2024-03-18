@@ -225,7 +225,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 ***Перед дальнейшими действиями, сохраните важные данные в вашей системе, будьте готовы к возможным зависаниям или синему экрану!
 Перед запуском тестов позаботьтесь о должном охлаждении процессора, области VRM и оперативной памяти (она может троттлить без дополнительного охлаждения)!***
 
-1. Подготовка: скачивание необходимых программ - для изменения смещения напряжения будем использовать [ThrottleStop](https://www.techpowerup.com/download/techpowerup-throttlestop/), для тестирования стабильности ядер - программу [OCCT](https://www.ocbase.com/), для теста стабильности кэша - [LinX v0.6.5](https://github.com/sanekgusev/LinX-old/releases/latest)
+1. Подготовка: скачивание необходимых программ - для изменения смещения напряжения будем использовать [ThrottleStop](https://www.techpowerup.com/download/techpowerup-throttlestop/), для тестирования стабильности ядер - программу [OCCT](https://www.ocbase.com/download), для теста стабильности кэша - [LinX v0.6.5](https://github.com/sanekgusev/LinX-old/releases/latest)
 
 **Подбор оптимального значения смещения напряжения на ядра**
 
