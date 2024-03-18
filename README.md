@@ -95,6 +95,7 @@
 (поддерживает режим сна, поддерживает только однопроцессорные системы, не поддерживает анлок режима AVX):
 
 ***Китайские материнские платы не нуждаются в этом драйвере и для них не рекомендуется делать анлок данным способом. Только для крайних случаев, для необычных брендовых материнских плат.***
+
 *ВНИМАНИЕ! После установки RAW драйвера не редактируйте этот биос любыми программами, в противном случае биос станет неработоспособным.*
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Нажимаем в верхнем правом углу кнопку RAW и выбираем необходимый биос
@@ -185,6 +186,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 (supports sleep mode, only supports uniprocessor systems, does not support AVX mode unlock):
 
 ***Chinese motherboards do not need this driver and it is not recommended to unlock them in this way. Only as a last resort, for unusual branded boards.***
+
 *ATTENTION! After installing the RAW driver, do not edit this BIOS with any programs, otherwise the BIOS will become inoperable.*
 1. In S3TurboTool, click "Build Driver"
 2. Press the RAW button in the upper right corner and select the required BIOS
