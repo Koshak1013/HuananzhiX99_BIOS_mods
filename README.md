@@ -135,9 +135,11 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 12. We open the list and follow the path "Intel image > BIOS region > 8C8CE578-...(the lowest one, in which the PEI drivers) >"
 13. We are looking for 271DD6F2-... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI driver. If this is not the case, then we will build the DXE driver.
 
-***PEI driver*** (supports sleep mode, only supports uniprocessor systems):
+<details>
+<summary>PEI driver</summary>
 
-*ATTENTION! On some branded motherboards there is a possibility that the BIOS will not work with this driver, in which case it is recommended to build a RAW driver.*
+(supports sleep mode, only supports uniprocessor systems):
+
 1. In S3TurboTool, click "Собрать драйвер"
 2. We adjust the required voltage offsets ([method for finding approximate values](#Finding-the-optimal-voltage-offset-values-for-your-processor-undervolting)). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
 3. In S3TurboTool, click UEFITool
@@ -153,8 +155,12 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 *If error 103 occurs when trying to flash, then you should reboot the system.*
 
 *If you used your own or someone else's dump to modify the BIOS, then after flashing, you need to reset the BIOS settings to the standard ones (in the BIOS settings menu or using a jumper).*
+</details>
 
-***DXE driver*** (does not support sleep mode, supports single and dual processor systems):
+<details>
+<summary>DXE driver</summary>
+
+(does not support sleep mode, supports single and dual processor systems):
 1. In S3TurboTool, click "Собрать драйвер"
 2. Press the DXE button in the upper right corner
 3. We adjust the required voltage offsets ([method for finding approximate values](#Finding-the-optimal-voltage-offset-values-for-your-processor-undervolting)). We also choose whether an additional signal is needed when turning on. Click "Собрать драйвер".
@@ -171,8 +177,12 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 *If error 103 occurs when trying to flash, then you should reboot the system.*
 
 *If you used your own or someone else's dump to modify the BIOS, then after flashing, you need to reset the BIOS settings to the standard ones (in the BIOS settings menu or using a jumper).*
+</details>
 
-***RAW driver*** (supports sleep mode, only supports uniprocessor systems, does not support AVX mode unlock):
+<details>
+<summary>RAW driver</summary>
+
+(supports sleep mode, only supports uniprocessor systems, does not support AVX mode unlock):
 
 ***Chinese motherboards do not need this driver and it is not recommended to unlock them in this way. Only as a last resort, for unusual branded boards.***
 *ATTENTION! After installing the RAW driver, do not edit this BIOS with any programs, otherwise the BIOS will become inoperable.*
@@ -184,6 +194,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 *If error 103 occurs when trying to flash, then you should reboot the system.*
 
 *If you used your own or someone else's dump to modify the BIOS, then after flashing, you need to reset the BIOS settings to the standard ones (in the BIOS settings menu or using a jumper).*
+</details>
 
 ***If you have any difficulties, as well as if you have comments and suggestions, please contact the [Telegram group](https://t.me/russian_xeon_community)***
 
