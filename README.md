@@ -6,6 +6,10 @@
 
 ***[> VK Community X79](https://vk.com/huanan_x79)***
 
+[Рекомендую ознакомиться с материалом, много полезной информации, поможет верно оценить возможности Xeon X99 и сделать правильный выбор](https://youtu.be/H5xgBq1O77M) *(спасибо PC4fan @ Артур Карпов)*:
+
+[![](https://i.ytimg.com/vi/H5xgBq1O77M/mqdefault.jpg)](https://youtu.be/H5xgBq1O77M)
+
 ## Оглавление
 
 1. [Unlock (Русский)](#инструкция-по-разблокировке-максчастоты-на-все-ядра-а-не-на-два-unlock), [Unlock (English)](#instructions-for-unlocking-the-maximum-frequency-for-all-cores-not-two-unlock), также доступна [Видео-инструкция](#видео-инструкция-спасибо-zerg_fb)
@@ -17,7 +21,7 @@
 7. [Как открыть скрытые пункты меню настроек биоса](#как-открыть-скрытые-пункты-меню-настроек-биоса)
 8. [Добавление поддержки Resizable BAR в биос](#добавление-поддержки-resizable-bar-в-биос)
 9. [Отключение бипера](#отключение-бипера)
-10. [Часто задаваемые вопросы](#часто-задаваемые-вопросы)
+10. [Поддержка](#поддержка)
 11. [О пост-кодах](#о-пост-кодах)
 12. [Если вы наблюдаете частоту системной шины меньшую, чем 99,75МГц](#если-вы-наблюдаете-частоту-системной-шины-меньшую-чем-9975мгц)
 13. [Настройка управления оборотами вентиляторов для Huananzhi X99-8M/8MD3/F8/T8/TF](#настройка-управления-оборотами-вентиляторов-для-huananzhi-x99-8m8md3f8t8tf)
@@ -30,7 +34,7 @@
 *(за данную утилиту и новый драйвер анлока особая благодарность ***ser8989***)*
 
 1. Запускаем S3TurboTool и нажимаем MMTool5
-2. В появившейся утилите "MMTool Aptio" нажимаем "Load Image" и выбираем необходимый биос
+2. В появившейся утилите "MMTool Aptio" нажимаем "Load Image" и выбираем биос, в который будем добавлять драйвер анлока
 3. Переходим на вкладку "CPU Patch", выделяем микрокод "6F 06F2", отмечаем "Delete a Patch Data", нажимаем Apply и соглашаемся
 4. Нажимаем "Save Image" и закрываем "MMTool Aptio"
 5. В S3TurboTool нажимаем AMIBCP
@@ -46,9 +50,10 @@
 12. Раскрываем список и идём по пути "Intel image > BIOS region > 8C8CE578-...(самый нижний, в котором PEI драйверы) >"
 13. Примерно среди первых 20 значений ищем 271DD6F2-... (модуль PchS3Peim). Если такой есть, значит будем собирать PEI драйвер. Если такого нет, значит соберём DXE драйвер.
 
-***PEI драйвер*** (поддерживает режим сна, поддерживает только однопроцессорные системы):
+<details>
+<summary>PEI драйвер</summary>
 
-*ВНИМАНИЕ! На некоторых брендовых материнских платах есть вероятность неработоспособности биоса с данным драйвером, в таком случае рекомендуется собрать RAW драйвер.*
+(поддерживает режим сна, поддерживает только однопроцессорные системы, не поддерживает брендовые материнские платы):
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Настраиваем необходимые смещения напряжения ([методика нахождения примерных значений](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting)). Также выбираем, нужен ли дополнительный сигнал при включении и выводе системы из сна. Нажимаем "Собрать драйвер".
 3. В S3TurboTool нажимаем UEFITool
@@ -64,8 +69,12 @@
 *Если при попытке прошивки возникает ошибка 103, то следует перезагрузить систему.*
 
 *Если для модификации биоса был использован свой или чужой дамп, то после прошивки нужно сбросить настройки биоса на стандартные (в меню настроек биоса либо перемычкой).*
+</details>
 
-***DXE драйвер*** (не поддерживает режим сна, поддерживает одно- и двухпроцессорные системы):
+<details>
+<summary>DXE драйвер</summary>
+
+(не поддерживает режим сна, поддерживает и одно- и двухпроцессорные системы, на двухпроцессорной системе будет работать сон, поддерживает платы ASRock и GIGABYTE):
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Нажимаем в верхнем правом углу кнопку DXE
 3. Настраиваем необходимые смещения напряжения ([методика нахождения примерных значений](#Подбор-оптимальных-значений-смещения-напряжений-на-вашем-процессоре-undervolting)). Также выбираем, нужен ли дополнительный сигнал при включении. Нажимаем "Собрать драйвер".
@@ -82,10 +91,15 @@
 *Если при попытке прошивки возникает ошибка 103, то следует перезагрузить систему.*
 
 *Если для модификации биоса был использован свой или чужой дамп, то после прошивки нужно сбросить настройки биоса на стандартные (в меню настроек биоса либо перемычкой).*
+</details>
 
-***RAW драйвер*** (поддерживает режим сна, поддерживает только однопроцессорные системы, не поддерживает анлок режима AVX):
+<details>
+<summary>RAW драйвер</summary>
+
+(поддерживает режим сна, поддерживает только однопроцессорные системы, не поддерживает анлок режима AVX):
 
 ***Китайские материнские платы не нуждаются в этом драйвере и для них не рекомендуется делать анлок данным способом. Только для крайних случаев, для необычных брендовых материнских плат.***
+
 *ВНИМАНИЕ! После установки RAW драйвера не редактируйте этот биос любыми программами, в противном случае биос станет неработоспособным.*
 1. В S3TurboTool нажимаем "Собрать драйвер"
 2. Нажимаем в верхнем правом углу кнопку RAW и выбираем необходимый биос
@@ -95,6 +109,7 @@
 *Если при попытке прошивки возникает ошибка 103, то следует перезагрузить систему.*
 
 *Если для модификации биоса был использован свой или чужой дамп, то после прошивки нужно сбросить настройки биоса на стандартные (в меню настроек биоса либо перемычкой).*
+</details>
 
 ***При возникновении трудностей, а также если у Вас есть замечания и пожелания, обращайтесь в [Telegram группу](https://t.me/russian_xeon_community)***
 
@@ -125,9 +140,11 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 12. We open the list and follow the path "Intel image > BIOS region > 8C8CE578-...(the lowest one, in which the PEI drivers) >"
 13. We are looking for 271DD6F2-... (PchS3Peim module) among the first 20 values. If there is one, then we will build the PEI driver. If this is not the case, then we will build the DXE driver.
 
-***PEI driver*** (supports sleep mode, only supports uniprocessor systems):
+<details>
+<summary>PEI driver</summary>
 
-*ATTENTION! On some branded motherboards there is a possibility that the BIOS will not work with this driver, in which case it is recommended to build a RAW driver.*
+(supports sleep mode, only supports uniprocessor systems):
+
 1. In S3TurboTool, click "Собрать драйвер"
 2. We adjust the required voltage offsets ([method for finding approximate values](#Finding-the-optimal-voltage-offset-values-for-your-processor-undervolting)). We also choose whether an additional signal is needed when turning on and waking the system from sleep. Click "Собрать драйвер".
 3. In S3TurboTool, click UEFITool
@@ -143,8 +160,12 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 *If error 103 occurs when trying to flash, then you should reboot the system.*
 
 *If you used your own or someone else's dump to modify the BIOS, then after flashing, you need to reset the BIOS settings to the standard ones (in the BIOS settings menu or using a jumper).*
+</details>
 
-***DXE driver*** (does not support sleep mode, supports single and dual processor systems):
+<details>
+<summary>DXE driver</summary>
+
+(does not support sleep mode, supports single and dual processor systems):
 1. In S3TurboTool, click "Собрать драйвер"
 2. Press the DXE button in the upper right corner
 3. We adjust the required voltage offsets ([method for finding approximate values](#Finding-the-optimal-voltage-offset-values-for-your-processor-undervolting)). We also choose whether an additional signal is needed when turning on. Click "Собрать драйвер".
@@ -161,10 +182,15 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 *If error 103 occurs when trying to flash, then you should reboot the system.*
 
 *If you used your own or someone else's dump to modify the BIOS, then after flashing, you need to reset the BIOS settings to the standard ones (in the BIOS settings menu or using a jumper).*
+</details>
 
-***RAW driver*** (supports sleep mode, only supports uniprocessor systems, does not support AVX mode unlock):
+<details>
+<summary>RAW driver</summary>
+
+(supports sleep mode, only supports uniprocessor systems, does not support AVX mode unlock):
 
 ***Chinese motherboards do not need this driver and it is not recommended to unlock them in this way. Only as a last resort, for unusual branded boards.***
+
 *ATTENTION! After installing the RAW driver, do not edit this BIOS with any programs, otherwise the BIOS will become inoperable.*
 1. In S3TurboTool, click "Build Driver"
 2. Press the RAW button in the upper right corner and select the required BIOS
@@ -174,6 +200,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 *If error 103 occurs when trying to flash, then you should reboot the system.*
 
 *If you used your own or someone else's dump to modify the BIOS, then after flashing, you need to reset the BIOS settings to the standard ones (in the BIOS settings menu or using a jumper).*
+</details>
 
 ***If you have any difficulties, as well as if you have comments and suggestions, please contact the [Telegram group](https://t.me/russian_xeon_community)***
 
@@ -202,7 +229,7 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 ***Перед дальнейшими действиями, сохраните важные данные в вашей системе, будьте готовы к возможным зависаниям или синему экрану!
 Перед запуском тестов позаботьтесь о должном охлаждении процессора, области VRM и оперативной памяти (она может троттлить без дополнительного охлаждения)!***
 
-1. Подготовка: скачивание необходимых программ - для изменения смещения напряжения будем использовать [ThrottleStop](https://www.techpowerup.com/download/techpowerup-throttlestop/), для тестирования стабильности ядер - программу [OCCT](https://www.ocbase.com/), для теста стабильности кэша - [LinX v0.6.5](https://github.com/sanekgusev/LinX-old/releases/latest)
+1. Подготовка: скачивание необходимых программ - для изменения смещения напряжения будем использовать [ThrottleStop](https://www.techpowerup.com/download/techpowerup-throttlestop/), для тестирования стабильности ядер - программу [OCCT](https://www.ocbase.com/download), для теста стабильности кэша - [LinX v0.6.5](https://github.com/sanekgusev/LinX-old/releases/latest)
 
 **Подбор оптимального значения смещения напряжения на ядра**
 
@@ -210,12 +237,12 @@ Make sure you are using the [latest version of S3TurboTool](https://github.com/K
 2. В блоке ***FIVR Control*** отмечаем ***CPU Core***
 3. В блоке ***CPU Core Voltage*** отмечаем ***Unlock Adjustable Voltage***, понижаем ***Offset Voltage***, начинаем с ***-100mV*** и нажимаем ***Apply***. Если система зависла или мы увидели синий экран, значит такое смещение нам точно не подходит, перезагружаем систему и пробуем -95mV, -90mV и т.д.
 4. Если всё вроде бы стабильно, значит запускаем ***OCCT***, выставляем режим теста:
-    - Вкладка: CPU
-    - Набор данных: Большой
-    - Режим: Тяжёлый
-    - Нагрузка: Переменная
-    - Инструкции: SSE (не AVX)
-    - Потоки: Авто
+    - CPU+RAM
+    - Data Set: Large
+    - Mode: Extreme
+    - Load Type: Variable
+    - Instruction Set: SSE
+    - Thread Settings: Auto
 
 5. Запускаем тест. Если система зависла или мы увидели синий экран (обычно ошибка CLOCK_WATCHDOG_TIMEOUT), то уменьшаем смещение и продолжаем тестировать до появления стабильности (***1 час***). Это и будет нашим значением для ядер.
 
@@ -260,7 +287,14 @@ Before proceeding, save important data on your system, be prepared for possible 
 1. After launching [ThrottleStop](https://www.techpowerup.com/download/techpowerup-throttlestop/), press FIVR
 2. In the "FIVR Control" block, "CPU Core" is marked, which means we change the offset on the cores
 3. In the "CPU Core Voltage" block, select "Unlock Adjustable Voltage", lower the "Offset Voltage", for example, to -100mV and click Apply. If the system freezes or we see a blue screen, then such an offset is definitely not suitable for us, we reboot the system and try -95mV, etc.
-4. If everything seems to be stable, then we launch the [OCCT](https://www.ocbase.com/), set the test mode "CPU/Data set Large/Mode Extreme/Load type Variable/Instruction set SSE/Threads Auto". Why SSE and not AVX? Because under AVX load, the processor switches to another operating mode, adds voltage and decreases frequency. This will not work when testing the stability of the cores. Before running the test, we take care of proper cooling of the processor, VRM area and RAM (it can throttle without additional cooling).
+4. If everything seems to be stable, then we launch the [OCCT](https://www.ocbase.com/download), set the test mode:
+    - CPU+RAM
+    - Data Set: Large
+    - Mode: Extreme
+    - Load Type: Variable
+    - Instruction Set: SSE
+    - Thread Settings: Auto
+
 5. We run the test. If the system freezes or we see a blue screen (usually the CLOCK_WATCHDOG_TIMEOUT error), then we reduce our offset and continue testing until stability appears (1 hour). This will be our core value.
 
 Next, we move on to the cache test (you can start with -125mV). Optimally test the cache in LinX (tested on [v0.6.5](https://github.com/sanekgusev/LinX-old/releases/latest)), set the 8192MB memory setting, press Start. In case of instability, a blue screen is possible (usually a WHEA_UNCORRECTABLE_ERROR error). 5 minutes of the test is enough.
@@ -393,33 +427,17 @@ Huananzhi X99-F8/T8/TF требуется извлечь из корпуса, и
 
 *Если бипер по-прежнему издаёт звуки, то попробуйте также обработать модуль StatusCodePei (в разделе с PEI модулями).*
 
-## Часто задаваемые вопросы
----
-***Вопрос:*** В чём преимущество нового драйвера от S3TurboTool перед драйверами от payne и MOF?
+## Поддержка
 
-***Ответ:*** Была решена проблема, при которой анлок сбрасывался при выводе системы из режима сна. Также было уменьшено энергопотребление процессора без нагрузки.
-
----
-***Вопрос:*** Кот, расскажи, какие ещё есть возможности у нового драйвера от S3TurboTool?
-
-***Ответ:*** Можно снизить напряжение на процессоре не используя анлок, для этого не выполняем шаги 1-9 инструкции и на этапе сборки драйвера снимаем галку "Разблокировка турбо". Также есть опция "Баг SVID/FIVR", это исказит отображение реального потребления процессора, в связи с чем в AVX-нагрузке перестанет падать частота, но соответственно вырастет потребление. Рекомендуется для моделей, у которых низкий заводской TDP, например E5-2630Lv3.
-
----
-***Вопрос:*** Как поддержать?
-
-***Ответ:***
+Если Вы имеете желание отблагодарить кого-либо, например если кто-то вам помог, то вот реквизиты:
 
 ser8989 - 5366-7280-9045-9598 (МТС Банк)
 
-S.T.A.L.K.E.R - 5469-6700-1549-2427 (Сбербанк)
-
 Василий Пупкин - 5368-2902-1226-6714 (ВТБ)
 
+S.T.A.L.K.E.R - 5469-6700-1549-2427 (Сбербанк)
+
 Снуки Лоу - 4817-7602-3407-9170 (Сбербанк)
-
-Кошак - Qiwi +7-902-два13-33-10 или 4276-6900-1026-7273 (Сбербанк)
-
-KOT JIETA - 5228-6005-4997-9898 (Сбербанк)
 
 Костян - 4276-0200-1999-5122 (Сбербанк)
 
